@@ -1,10 +1,12 @@
 # Selected Research-Agent Case Studies
 
+> A curated public selection from a larger fleet of 28+ specialized research agents.
+
 This repository presents selected case studies and architectural artifacts from a larger research-agent system. It documents how persistent domain agents form and revise beliefs, test claims adversarially, coordinate evidence, track calibration, and alter procedures after failure.
 
 It is a curated demonstration—not a complete release of the underlying system.
 
-The broader system contains a substantially larger fleet of specialized agents, shared research infrastructure, live state, and private operational material. Rather than publishing a few agent directories without their history or context, this repository focuses on the artifacts and episodes that best reveal how the system reasons and changes over time.
+The broader system's July 2026 canonical roster contains 28 active specialized agents, alongside on-demand, dormant, and architectural roles. It also contains shared research infrastructure, live state, and private operational material. Rather than publishing a few agent directories without their history or context, this repository focuses on the artifacts and episodes that best reveal how the system reasons and changes over time.
 
 ## What this repository is trying to show
 
@@ -41,112 +43,43 @@ Publishing an entire working directory would expose a great deal of live operati
 
 This repository therefore reconstructs several bounded cases using sanitized evidence, dated artifacts, explanatory notes, and reusable templates. The goal is to make the underlying epistemic and operational mechanisms legible.
 
-## The four-part demonstration
+## The five-part demonstration
 
-### 1. SAM ⇄ RED — governed adversarial reasoning
+### 1. PROME — orchestration and institutional state
 
-The SAM–RED dialogue is the principal demonstration of argumentation and belief revision.
+PROME manages priorities, task lifecycle, action-gate state, operator decisions, and completion processing. Its inclusion prevents the cases from appearing to be several sophisticated but unrelated agents.
 
-The case includes:
+The important boundary is explicit: PROME coordinates domain work without replacing domain judgment. See [PROME orchestration](architecture/prome-orchestration/).
 
-- steelmanning before criticism;
-- preregistered survival criteria;
-- bounded argumentative rounds;
-- explicit concessions;
-- separation of objections from decisive falsifiers;
-- a forced confidence downgrade from **MEDIUM-HIGH** to **MEDIUM**;
-- a dated falsification window;
-- a consequential decision not to propagate a more complex strategy.
+### 2. NEXUS — cross-domain connective tissue
 
-The important result is not that two agents generated opposing viewpoints. The result is that the dialogue was governed by rules strong enough to produce a visible change in belief and a downstream decision.
+NEXUS compares standardized briefs to preserve causal mechanisms, uncertainty, sending edges, and waiting dependencies across specialties. It is the analytical synthesis layer, not the operational orchestrator.
 
-This case asks:
+See the [NEXUS brief schema](architecture/nexus-brief-schema.md).
 
-> Can an adversarial agent interaction preserve the strongest version of a claim, apply criteria fixed in advance, and produce accountable belief revision rather than theatrical debate?
+### 3. SAM ⇄ RED — governed adversarial reasoning
 
-See: [`cases/01_sam-red-adversarial-dialogue/`](cases/01_sam-red-adversarial-dialogue/)
+Six preregistered challenges produced explicit concessions, a confidence downgrade from **MEDIUM-HIGH** to **MEDIUM**, a fixed falsification window, a retired mechanism, and a decision not to propagate two more complex options.
 
-### 2. BRENT — calibration and evidentiary restraint
+> Can an adversarial interaction apply criteria fixed in advance and produce accountable belief revision rather than theatrical debate?
 
-BRENT is the most complete example of a mature persistent domain agent.
+See the [SAM–RED case](cases/01_sam-red-adversarial-dialogue/).
 
-Its prediction ledger identifies recurring calibration patterns, including:
+### 4. BRENT — calibration and evidentiary restraint
 
-- underconfidence on direct physical constraints;
-- overconfidence on third-order transmission chains;
-- confusion between the presence of a mechanism and the crossing of a decision threshold;
-- increasing uncertainty as additional intermediating actors introduce optionality;
-- the need for a pre-flight test before accepting future predictions.
+A headline price condition passed, but BRENT returned **DENY** because only one of two required fresh independent evidentiary legs fired. The case shows how freshness, causal-root, and no-double-counting rules can block apparent confirmation.
 
-The featured sustain-test episode is especially important. A headline price condition passed, but BRENT returned **DENY** because the full test required two independent evidentiary legs and only one had fired.
+> Can a domain agent resist confirmation when the evidentiary structure preregistered before the outcome has not been satisfied?
 
-In reaching that decision, the agent:
+See the [BRENT case](cases/02_brent-calibration-and-deny/).
 
-- refused to count stale evidence;
-- refused to double-count related observations as independent confirmation;
-- excluded evidence arising from the wrong causal root;
-- distinguished a visible market outcome from proof of the proposed mechanism;
-- preserved the preregistered test despite pressure from a partially confirming headline.
+### 5. VIOLET — detection, execution failure, and adaptation
 
-This case asks:
+Two gates fired, but the required packet disappeared for seven days. The action was ruled lapsed, an owner-independent gate ledger was introduced, and a later fresh look concluded **NO-FIRE** against changed conditions.
 
-> Can a domain agent resist apparent confirmation when the causal and evidentiary structure required by its earlier test has not actually been satisfied?
+> Can an agent system distinguish noticing, communicating, deciding, and acting—and redesign itself when those stages fail to connect?
 
-See: [`cases/02_brent-calibration-and-deny/`](cases/02_brent-calibration-and-deny/)
-
-### 3. VIOLET — detection, execution failure, and procedural adaptation
-
-VIOLET is the repository’s principal failure-and-learning case.
-
-The original monitoring architecture correctly detected two gates. The downstream execution packet was nevertheless dropped for seven days. The system did not retroactively pretend that the intended action had occurred or that the delayed action remained valid.
-
-Instead:
-
-- the failure was acknowledged explicitly;
-- the original action was ruled lapsed;
-- the difference between detection and delivery was formalized;
-- an owner-independent gate ledger was introduced;
-- staleness controls were added;
-- a preregistered canary map was built;
-- monitoring failures themselves became mechanically detectable.
-
-The canary map distinguishes among:
-
-- live calibrated instruments;
-- instruments that exist but lack calibrated thresholds;
-- externally owned signals;
-- observed successes and false negatives;
-- expected pull cadence;
-- “dark canaries” that have gone unobserved beyond their allowed interval.
-
-A later fresh-look memorandum provides a second form of revision. VIOLET determined that the premise queued for investigation had become stale, reconstructed the current evidence, changed the interpretation, and concluded **NO-FIRE**.
-
-This case asks:
-
-> Can an agent system represent the difference between noticing, communicating, deciding, and acting—and then redesign itself when those stages fail to connect?
-
-See: [`cases/03_violet-detection-to-execution-failure/`](cases/03_violet-detection-to-execution-failure/)
-
-### 4. NEXUS — the connective architecture
-
-NEXUS provides the grammar that makes the other cases parts of a system rather than isolated agent performances.
-
-The NEXUS brief schema distinguishes:
-
-- within-domain reasoning from cross-domain transmission;
-- observations from causal mechanisms;
-- sending edges from waiting edges;
-- active claims from unresolved questions;
-- agreement from calibrated divergence;
-- concise cross-agent messages from selective drill-down into raw state.
-
-The architecture is designed to transmit more than conclusions. A useful message should preserve why a finding matters, which causal channel it may enter, how uncertain it is, and what another domain agent should watch next.
-
-This case asks:
-
-> What information must survive when specialized agents exchange findings across disciplinary and causal boundaries?
-
-See: [`architecture/nexus-brief-schema.md`](architecture/nexus-brief-schema.md)
+See the [VIOLET case](cases/03_violet-detection-to-execution-failure/).
 
 ## Repository structure
 
@@ -156,6 +89,7 @@ research-agent-case-study/
 ├── SYSTEM_OVERVIEW.md
 ├── architecture/
 │   ├── persistent-domain-ownership.md
+│   ├── prome-orchestration/
 │   ├── nexus-brief-schema.md
 │   └── orchestration-mode-split.md
 ├── cases/
@@ -186,9 +120,10 @@ For a rapid overview:
 For architecture and implementation:
 
 1. Begin with [`architecture/persistent-domain-ownership.md`](architecture/persistent-domain-ownership.md).
-2. Review the NEXUS brief schema.
-3. Inspect each case’s dated artifacts and reconstruction notes.
-4. Compare the public templates with the mechanisms demonstrated in the cases.
+2. Review [PROME orchestration](architecture/prome-orchestration/) and its task lifecycle.
+3. Review the [NEXUS brief schema](architecture/nexus-brief-schema.md).
+4. Inspect each case’s dated artifacts and reconstruction notes.
+5. Compare the public templates with the mechanisms demonstrated in the cases.
 
 ## Design principles
 
@@ -321,9 +256,10 @@ Where possible, the repository separates direct artifacts from retrospective exp
 
 ## Current status
 
-This repository is being assembled in stages. The planned initial release contains:
+The initial release contains:
 
 - a system overview;
+- PROME and NEXUS architectural layers;
 - three sanitized case studies;
 - the NEXUS communication schema;
 - selected reusable templates;
@@ -337,10 +273,11 @@ The purpose of this repository is not to argue that these agents never fail. The
 
 The cases show a system attempting to make reasoning and failure inspectable:
 
+- PROME keeps priorities, obligations, and human decisions distinct from domain judgment.
+- NEXUS preserves mechanisms and uncertainty as evidence moves across domains.
 - SAM and RED preserve disagreement strongly enough to force belief revision.
 - BRENT denies apparent confirmation when the required evidence is not causally independent.
 - VIOLET reveals that correct detection can still die in delivery, then changes the monitoring architecture in response.
-- NEXUS defines how those local findings can move through a larger network without losing their mechanism or uncertainty.
 
 The resulting story is not simply “here are some agents.” It is:
 
