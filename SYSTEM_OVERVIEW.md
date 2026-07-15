@@ -1,6 +1,6 @@
 # System Overview
 
-This repository is a curated view into a larger, human-directed research system. The canonical July 2026 roster contains 28 active specialized agents, plus on-demand, dormant, and architectural roles. Only a few representative cases are published here.
+This repository is a curated view into a larger, human-directed research system. The canonical July 2026 roster contains 28 active specialized agents, plus on-demand, dormant, and architectural roles. Only a few representative cases and six reconstructed agent packages are published here.
 
 The system is best understood as a Git-versioned research institution, not as a collection of character prompts. Agents retain domain ownership across sessions, write claims and uncertainty into inspectable files, exchange bounded handoffs, and leave dated records when their views change.
 
@@ -82,5 +82,6 @@ The operator retains authority over external communication, public release, arch
 1. Read [persistent domain ownership](architecture/persistent-domain-ownership.md).
 2. Read [PROME orchestration](architecture/prome-orchestration/README.md).
 3. Review the [NEXUS brief schema](architecture/nexus-brief-schema.md).
-4. Continue through the SAM–RED, BRENT, and VIOLET cases.
-5. Finish with [Lessons Learned](LESSONS_LEARNED.md).
+4. Browse the [public agent packages](agents/).
+5. Continue through the SAM–RED, BRENT, and VIOLET cases.
+6. Finish with [Lessons Learned](LESSONS_LEARNED.md).
