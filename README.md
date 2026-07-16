@@ -43,6 +43,19 @@ Publishing an entire working directory would expose a great deal of live operati
 
 This repository therefore reconstructs several bounded cases using sanitized evidence, dated artifacts, explanatory notes, and reusable templates. The goal is to make the underlying epistemic and operational mechanisms legible.
 
+## Public agent packages
+
+The [`agents/`](agents/) directory adds a second view: six source-derived, public-safe agent packages for PROME, NEXUS, SAM, RED, BRENT, and VIOLET.
+
+Each package contains:
+
+- a role and ownership boundary;
+- sanitized operating instructions;
+- a public state schema;
+- an explicitly non-live example state.
+
+These are traceable semantic reconstructions rather than raw directory copies. They show how an agent boots, reasons, writes back, communicates, and preserves state while withholding current research, private memory, live thresholds, positions, data adapters, and operational infrastructure.
+
 ## The five-part demonstration
 
 ### 1. PROME — orchestration and institutional state
@@ -96,6 +109,14 @@ research-agent-case-study/
 │   ├── 01_sam-red-adversarial-dialogue/
 │   ├── 02_brent-calibration-and-deny/
 │   └── 03_violet-detection-to-execution-failure/
+├── agents/
+│   ├── shared/
+│   ├── PROME/
+│   ├── NEXUS/
+│   ├── SAM/
+│   ├── RED/
+│   ├── BRENT/
+│   └── VIOLET/
 ├── templates/
 │   ├── domain-agent-instructions.md
 │   ├── prediction-ledger.tsv
@@ -112,8 +133,9 @@ For a rapid overview:
 
 1. Read this file.
 2. Read [`SYSTEM_OVERVIEW.md`](SYSTEM_OVERVIEW.md).
-3. Review the summary page inside each case directory.
-4. Finish with [`LESSONS_LEARNED.md`](LESSONS_LEARNED.md).
+3. Browse the [public agent packages](agents/).
+4. Review the summary page inside each case directory.
+5. Finish with [`LESSONS_LEARNED.md`](LESSONS_LEARNED.md).
 
 ### Technical path
 
@@ -122,8 +144,9 @@ For architecture and implementation:
 1. Begin with [`architecture/persistent-domain-ownership.md`](architecture/persistent-domain-ownership.md).
 2. Review [PROME orchestration](architecture/prome-orchestration/) and its task lifecycle.
 3. Review the [NEXUS brief schema](architecture/nexus-brief-schema.md).
-4. Inspect each case’s dated artifacts and reconstruction notes.
-5. Compare the public templates with the mechanisms demonstrated in the cases.
+4. Compare the [agent packages](agents/) and their state schemas.
+5. Inspect each case’s dated artifacts and reconstruction notes.
+6. Compare the public templates with the mechanisms demonstrated in the cases.
 
 ## Design principles
 
@@ -218,7 +241,7 @@ The initial public release excludes:
 - current trade files, live gates, and position surfaces;
 - credentials, private data sources, or proprietary access details;
 - operational state that could expose active research decisions;
-- complete directories whose internal dependencies would be misleading when removed from the larger system;
+- raw working directories whose live state and internal dependencies would be misleading outside the larger system;
 - HENRY and other agents whose value is better demonstrated in a deeper architectural follow-up.
 
 The omissions are not intended to make the cases look cleaner than they were. Each case should preserve material uncertainty, contrary evidence, concessions, and relevant failures. Sanitization removes sensitive operational content, not the difficulty of the reasoning problem.
@@ -247,6 +270,7 @@ This is a curated case-study repository, not a controlled scientific evaluation 
 - The underlying language models remain probabilistic and can generate unsupported claims.
 - Persistent state can accumulate errors as well as insights.
 - Agent names and role definitions do not themselves guarantee independent reasoning.
+- The public agent packages are reconstructed specifications, not self-contained production deployments.
 - Multi-agent disagreement can become performative if concessions and decision rules are not enforced.
 - Procedural adaptation is not equivalent to autonomous model-weight learning.
 - Results from one domain may not generalize to another.
@@ -264,6 +288,8 @@ The initial release contains:
 - the NEXUS communication schema;
 - selected reusable templates;
 - a lessons-learned synthesis.
+
+The second release layer adds public-safe packages for PROME, NEXUS, SAM, RED, BRENT, and VIOLET. The packages expose operating contracts and state models without publishing the agents' current working directories.
 
 Future additions may include controlled component ablations, evaluation rubrics, and deeper architectural notes. Additional private agents may be introduced only when their context can be presented without exposing live operational state or reducing them to decontextualized prompt folders.
 
