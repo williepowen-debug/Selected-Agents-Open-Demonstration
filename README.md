@@ -56,6 +56,12 @@ Each package contains:
 
 These are traceable semantic reconstructions rather than raw directory copies. They show how an agent boots, reasons, writes back, communicates, and preserves state while withholding current research, private memory, live thresholds, positions, data adapters, and operational infrastructure.
 
+## Behavioral evaluation layer
+
+The [`evaluations/`](evaluations/) directory adds controlled fictional tests for the public contracts. It includes one role-fidelity fixture per agent, two multi-agent handoff tests, two component ablations, a shared rubric, and a reproducible result-record template.
+
+The fixtures define expected observable properties and automatic failure conditions. They are evaluation specifications, not claimed benchmark results, and they do not use live market data.
+
 ## The five-part demonstration
 
 ### 1. PROME — orchestration and institutional state
@@ -117,6 +123,10 @@ research-agent-case-study/
 │   ├── RED/
 │   ├── BRENT/
 │   └── VIOLET/
+├── evaluations/
+│   ├── single-agent/
+│   ├── integration/
+│   └── ablations/
 ├── templates/
 │   ├── domain-agent-instructions.md
 │   ├── prediction-ledger.tsv
@@ -134,8 +144,9 @@ For a rapid overview:
 1. Read this file.
 2. Read [`SYSTEM_OVERVIEW.md`](SYSTEM_OVERVIEW.md).
 3. Browse the [public agent packages](agents/).
-4. Review the summary page inside each case directory.
-5. Finish with [`LESSONS_LEARNED.md`](LESSONS_LEARNED.md).
+4. Review the [evaluation inventory](evaluations/).
+5. Review the summary page inside each case directory.
+6. Finish with [`LESSONS_LEARNED.md`](LESSONS_LEARNED.md).
 
 ### Technical path
 
@@ -145,8 +156,9 @@ For architecture and implementation:
 2. Review [PROME orchestration](architecture/prome-orchestration/) and its task lifecycle.
 3. Review the [NEXUS brief schema](architecture/nexus-brief-schema.md).
 4. Compare the [agent packages](agents/) and their state schemas.
-5. Inspect each case’s dated artifacts and reconstruction notes.
-6. Compare the public templates with the mechanisms demonstrated in the cases.
+5. Inspect the [evaluation methodology and fixtures](evaluations/).
+6. Inspect each case’s dated artifacts and reconstruction notes.
+7. Compare the public templates with the mechanisms demonstrated in the cases.
 
 ## Design principles
 
@@ -250,6 +262,8 @@ The omissions are not intended to make the cases look cleaner than they were. Ea
 
 Readers are encouraged to look beyond whether they agree with a case’s substantive conclusion.
 
+The [public evaluation layer](evaluations/) turns several of these questions into frozen fictional fixtures with explicit scoring rules. It evaluates observable artifacts and does not claim access to hidden model reasoning.
+
 More useful questions include:
 
 - Were the decision criteria defined before the result?
@@ -291,7 +305,9 @@ The initial release contains:
 
 The second release layer adds public-safe packages for PROME, NEXUS, SAM, RED, BRENT, and VIOLET. The packages expose operating contracts and state models without publishing the agents' current working directories.
 
-Future additions may include controlled component ablations, evaluation rubrics, and deeper architectural notes. Additional private agents may be introduced only when their context can be presented without exposing live operational state or reducing them to decontextualized prompt folders.
+The third release layer adds a controlled evaluation specification: six single-agent fixtures, two multi-agent handoff tests, two component ablations, a shared rubric, and a result-record template. No benchmark results are claimed until a runner configuration and complete run artifacts are published.
+
+Future additions may include replicated evaluation results and deeper architectural notes. Additional private agents may be introduced only when their context can be presented without exposing live operational state or reducing them to decontextualized prompt folders.
 
 ## Central takeaway
 
