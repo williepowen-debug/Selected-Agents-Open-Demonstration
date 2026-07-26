@@ -8,6 +8,73 @@ It is a curated demonstration—not a complete release of the underlying system.
 
 The broader system's July 2026 canonical roster contains 28 active specialized agents, alongside on-demand, dormant, and architectural roles. It also contains shared research infrastructure, live state, and private operational material. Rather than publishing a few agent directories without their history or context, this repository focuses on the artifacts and episodes that best reveal how the system reasons and changes over time.
 
+## Operating record
+
+The system has run near-daily since February 2026. Counts are as of **2026-07-26** and are produced by the commands shown, which can be re-run to regenerate them. They drift upward as the system continues to operate.
+
+| Metric | Value | Command |
+|---|---|---|
+| First commit | 2026-02-01 | `git log --reverse --format=%ad --date=short \| head -1` |
+| Days with commits | **172 of 176** | `git log --format=%ad --date=short \| sort -u \| wc -l` |
+| Total commits | 5,117 | `git rev-list --count HEAD` |
+| Agents with live state files | 38 | `ls AGENTS/*/STATUS.md \| wc -l` |
+| Catalogued failure findings | **208** | `ls memory/auto/finding_*.md \| wc -l` |
+| Registered predictions | **411** across 42 ledgers | `find AGENTS -name PREDICTIONS.tsv -exec awk 'FNR>1 && $0!~/^#/ && NF>2' {} \; \| wc -l` |
+| Daily session notes | 128 | `ls memory/2*.md \| wc -l` |
+
+These commands run against the private operating repository, which holds live research state and is not published. **It is available for review on request.**
+
+Two of these are more informative than the others. **172 commit-days out of 176** is the operating record — a sustained practice rather than a weekend build. **208 catalogued failure findings** is the research asset: each is a dated file recording something that went wrong and the procedure that changed in response.
+
+A note on the prediction count. Three defensible numbers exist depending on how a ledger is defined; the one above counts data rows in files named exactly `PREDICTIONS.tsv`. The command is published because the definition, not the number, is the thing a reader needs in order to check it.
+
+## What I contributed
+
+I designed and operate this system. That covers the architecture, the coordination protocols, the state model, the gate and prediction ledgers, the failure-review discipline, and every decision the system routes for human approval.
+
+The agents produce the domain analysis. Commits carry `Co-Authored-By` trailers throughout, and the division is visible in the history: the research conclusions are model-generated, and the structure that constrains, checks, and records them is mine.
+
+The failures documented here are also mine — both the ones the system made and the ones in how I built it.
+
+## Open research question
+
+**Do persistent roles, institutional memory, and governed adversarial review measurably improve research quality over a single well-prompted model — and which of those components does the work?**
+
+Six months of operation cannot answer this, and it is worth being precise about why:
+
+- **No counterfactual.** The system ran; no matched single-model baseline ran alongside it. Nothing here establishes what the same questions would have produced without the harness.
+- **No control.** Model versions, the protocols, and my own skill all changed over the same six months. Any improvement is confounded three ways.
+- **Selection on the dependent variable.** The cases in this repository were chosen because they are legible and instructive. That is the wrong sampling procedure for measuring how often the system reasons well.
+
+The record is therefore useful for generating hypotheses about failure modes, and not for testing them.
+
+### The experiment
+
+A budget-matched ablation over an identical task set:
+
+1. a single model with an ordinary research prompt;
+2. the same model with persistent domain state;
+3. the above plus adversarial review against criteria fixed before the outcome;
+4. the above plus cross-domain coordination and explicit handoff.
+
+The point is to isolate which institutional mechanism produces any observed gain, not to stage a contest between one agent and many. A result showing that most of the benefit comes from persistent state alone — and that coordination adds cost without accuracy — would be a useful finding, and it is one this design can return.
+
+### Ground truth without leakage
+
+Forecast accuracy is the obvious dependent variable and the wrong one. Backtesting against historical events risks measuring recall rather than research, since the model may already know the outcomes; waiting for prospective resolution is too slow to run an experiment against.
+
+So the primary measures grade **process rather than outcome**: citation fidelity, use of superseded evidence, correlated sources counted as independent, entity disambiguation under near-name collision, and whether stated confidence moves correctly when a falsifying document is injected.
+
+These are graded against a corpus constructed for the purpose, with the contradictions, staleness, shared antecedents, and name collisions planted deliberately. Ground truth holds by construction, and because the corpus did not exist during training, memorization buys nothing.
+
+The dependent variables are not invented for the study. They are the failure modes catalogued across the 208 findings above, operationalized — which is the one thing six months of naturalistic operation is genuinely good for.
+
+**Cost is a first-class measure, not a footnote.** Tokens, latency, and human review minutes per useful correction, reported alongside every accuracy result. A harness that improves reliability at ten times the cost has a different economic meaning than one that improves it at parity, and the crossover point where human effort becomes cheaper than agent spend is the measurable form of the question ([METR, *Expenditure Horizon*, July 2026](https://metr.org/blog/2026-07-21-expenditure-horizon/)).
+
+**Known weakness:** a constructed corpus may not transfer to real research conditions. The mitigation is a small prospective arm using the existing pre-registration pipeline against scheduled data releases, which resolve in days rather than months.
+
+**The incremental value of this system over a single well-prompted model is unproven. The above is the experiment I would run to find out.**
+
 ## What this repository is trying to show
 
 Many agent demonstrations begin with a prompt and end with a polished answer. That makes it difficult to see whether the agent:
