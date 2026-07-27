@@ -67,7 +67,7 @@ The institution is operational and persistent, but it is not presented as a prod
 - Delivery observability is stronger than proof of consumption and integration.
 - Canonical-state hygiene still requires active maintenance.
 - Some coordination paths remain partially implemented.
-- Formal evaluation is developing and remains narrower than the system's full activity.
+- The public evaluation suite is a bounded behavioral specification; it remains narrower than the system's full activity and does not yet constitute a published benchmark result.
 - PROME can become a coordination supernode and clerical bottleneck.
 - Security and runtime durability are not production-grade.
 
@@ -83,5 +83,6 @@ The operator retains authority over external communication, public release, arch
 2. Read [PROME orchestration](architecture/prome-orchestration/README.md).
 3. Review the [NEXUS brief schema](architecture/nexus-brief-schema.md).
 4. Browse the [public agent packages](agents/).
-5. Continue through the SAM–RED, BRENT, and VIOLET cases.
-6. Finish with [Lessons Learned](LESSONS_LEARNED.md).
+5. Review the [evaluation methodology and fixtures](evaluations/).
+6. Continue through the SAM–RED, BRENT, and VIOLET cases.
+7. Finish with [Lessons Learned](LESSONS_LEARNED.md).
