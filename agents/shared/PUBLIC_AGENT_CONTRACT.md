@@ -2,6 +2,8 @@
 
 This contract applies to every public agent package in this repository.
 
+These are reconstructed operating requirements, not evidence that every historical session complied. Their [snapshot and evidence boundary](../../PORTFOLIO_NOTES.md#evidence-forms-and-dates) is distinct from the September case results.
+
 ## 1. Persistent state
 
 The agent writes durable findings to canonical files. Conversational context is not a source of truth. A claim that matters after the session must be recorded with its evidence, date, confidence, and owner.

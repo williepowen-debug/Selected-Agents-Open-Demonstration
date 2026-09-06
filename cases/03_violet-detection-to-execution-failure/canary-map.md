@@ -4,6 +4,8 @@ After the dropped-packet incident, VIOLET assembled an explicit map of which ins
 
 This public version preserves the ownership and calibration logic but removes current thresholds and action routes.
 
+Coverage labels below describe the July 15, 2026 public reconstruction, not current September monitoring coverage.
+
 ## Three tiers
 
 ### Tier 1 — Owned and live

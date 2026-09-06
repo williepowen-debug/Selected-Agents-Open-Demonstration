@@ -14,8 +14,11 @@ VIOLET is also the clearest example of an operational lesson: correct detection 
 ## Related evidence
 
 - [Detection-to-execution failure case](../../cases/03_violet-detection-to-execution-failure/)
+- [Correction-verification case and offline tests](../../cases/04_violet-correction-verification/) — a separate September episode, with source-derived code and synthetic data
 - [Canary-map reconstruction](../../cases/03_violet-detection-to-execution-failure/canary-map.md)
 
 ## Publication note
 
 This package preserves VIOLET's domain, staleness, canary-coverage, and action-gate separation. It excludes live volatility levels, current thresholds, positions, private tools, active gates, current routes, and working research state.
+
+The separate correction-verification case publishes bounded historical code excerpts, not the private tool or a current monitoring deployment.

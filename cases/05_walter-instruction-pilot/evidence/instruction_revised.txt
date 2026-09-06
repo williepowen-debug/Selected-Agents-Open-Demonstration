@@ -1,0 +1,9 @@
+[PROTOCOL PREAMBLE — applies to every step below]
+**G1 — When a step's verb is "read" or "refresh", ask what would happen if the thing were already gone or already false. If the answer is "nothing", the step is decorative.**
+
+3. **Read `LAST_COMPLETION.md`** — `FOLLOW-UP` + `OPEN DESIGN DECISIONS` are the canonical running list of open items, carried forward at every closeout. 🔴 **EVALUATE THEM; DO NOT MERELY READ THEM.**
+   - **TRIGGER —** any carried item naming a FILE, COMMIT, FIGURE or CONDITION.
+   - **ACTION —** open the named evidence and test whether the claim is still true **BEFORE surfacing it in the boot reply.** Start with the items whose evidence you already hold (auto-loaded files, your own STATUS) — cheapest to check, therefore most expensive to get wrong.
+   - **FAILURE BEHAVIOUR —** a carried item is a STRING, and a flag that outlives its own discharge is worse than no flag because it carries a session's authority. **If the evidence cannot be reached, that makes the item neither true nor false: surface it as UNVERIFIED and name what you could not open.** Never drop it and never assert it.
+   - *Interpretive example (2026-09-06): the carried "`SIG-W-20260716-004` has no `status:` header" was surfaced to Will before being tested. The header had been added two days earlier — the discharge was sitting in the tree.*
+   - **REFERENCE —** [→ BP §3] for the incident history. `[[finding_dated_carry_item_has_no_expiry_check]]` · `[[finding_record_of_an_action_is_not_the_action]]`

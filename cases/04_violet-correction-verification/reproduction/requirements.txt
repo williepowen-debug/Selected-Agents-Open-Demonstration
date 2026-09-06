@@ -1,0 +1,2 @@
+# Only pandas is external. requests and yfinance are replaced by fixture adapters.
+pandas==3.0.3

@@ -1,0 +1,140 @@
+{
+  "sources": {
+    "evidence/instruction_original.txt": {
+      "commit": "ddd3713aea3251cadf8eaa2ae7cc820dbf5a9cb2",
+      "source_path": "AGENTS/WALTER/design/pilot_runs/step3_ORIGINAL.txt",
+      "source_sha256": "51f58ba427fbcb73c2ea0bc6e0f9dcf79463546b3a5d88db358ea5f99baad9e6",
+      "method": "verbatim",
+      "public_sha256": "51f58ba427fbcb73c2ea0bc6e0f9dcf79463546b3a5d88db358ea5f99baad9e6",
+      "public_bytes": 1724
+    },
+    "evidence/instruction_revised.txt": {
+      "commit": "ddd3713aea3251cadf8eaa2ae7cc820dbf5a9cb2",
+      "source_path": "AGENTS/WALTER/design/pilot_runs/step3_REVISED.txt",
+      "source_sha256": "8b1d6bb79a54be444dcb81acea0709af74a9708b3fe140e1df61658bb58c1d93",
+      "method": "verbatim",
+      "public_sha256": "8b1d6bb79a54be444dcb81acea0709af74a9708b3fe140e1df61658bb58c1d93",
+      "public_bytes": 1537
+    },
+    "evidence/record_control.md": {
+      "commit": "ddd3713aea3251cadf8eaa2ae7cc820dbf5a9cb2",
+      "source_path": "AGENTS/WALTER/design/pilot_runs/ARM_CONTROL_RAW.md",
+      "source_sha256": "3bc84da8507ee9c7680454eb8b76bf6b60e05ca8c8806093dd48cc2dfc41c0f2",
+      "method": "sanitized record",
+      "public_sha256": "1183bfade5637e26fc5cc206c2dc2299b605a428b442d0e0728cbc05e769de10",
+      "public_bytes": 13584
+    },
+    "evidence/record_revised.md": {
+      "commit": "ddd3713aea3251cadf8eaa2ae7cc820dbf5a9cb2",
+      "source_path": "AGENTS/WALTER/design/pilot_runs/ARM_REVISED_RAW.md",
+      "source_sha256": "90a74515dd925382cde897c8828db39ff1e9c6b70401ff412a3203cf03391e2c",
+      "method": "sanitized record",
+      "public_sha256": "8f8b67f63fdbfbe1d622531883d55bd7d4e1ff1bdc20d69b54c9d1e3af6d9367",
+      "public_bytes": 11222
+    },
+    "fixture/AGENTS/WALTER/LAST_COMPLETION.md": {
+      "commit": "ddd3713aea3251cadf8eaa2ae7cc820dbf5a9cb2",
+      "source_path": "AGENTS/WALTER/design/pilot_runs/fixture/AGENTS/WALTER/LAST_COMPLETION.md",
+      "source_sha256": "5881e80737bf7f41910376295b8ca753e99e2718801721295b7c5bb61dc4b233",
+      "method": "sanitized fixture",
+      "public_sha256": "5881e80737bf7f41910376295b8ca753e99e2718801721295b7c5bb61dc4b233",
+      "public_bytes": 625
+    },
+    "fixture/AGENTS/REGINALD/registry/THRESHOLDS.tsv": {
+      "commit": "ddd3713aea3251cadf8eaa2ae7cc820dbf5a9cb2",
+      "source_path": "AGENTS/WALTER/design/pilot_runs/fixture/AGENTS/REGINALD/registry/THRESHOLDS.tsv",
+      "source_sha256": "3fdae25fa72ba78244b1c6a4d44a8c28ea56e7af57f15ca2de9c824b071f1562",
+      "method": "sanitized fixture",
+      "public_sha256": "235c943221a571377adf1c7738bf64a6922fceb11e1029b7c0d14c2255b0e4b0",
+      "public_bytes": 211
+    },
+    "fixture/BOARD/SIG-W-20260812-003-example-signal.md": {
+      "commit": "ddd3713aea3251cadf8eaa2ae7cc820dbf5a9cb2",
+      "source_path": "AGENTS/WALTER/design/pilot_runs/fixture/BOARD/SIG-W-20260812-003-example-signal.md",
+      "source_sha256": "d04d8e8f66ef17bceb8a8e0ff2b20721dba689fbdab96cbdaf60c5ca7052e9df",
+      "method": "sanitized fixture",
+      "public_sha256": "d04d8e8f66ef17bceb8a8e0ff2b20721dba689fbdab96cbdaf60c5ca7052e9df",
+      "public_bytes": 273
+    },
+    "evidence/rubric_before_runs.md": {
+      "commit": "269fa140f2ff325c2c7fea2db866a76dafa24521",
+      "source_path": "AGENTS/WALTER/design/PILOT_STEP_FORM_2026-09-06.md",
+      "source_sha256": "6727acc7a99fecf13dad9b45e13d59ef31ec61ae8c1e3fe258ab1b2a4c8ffc49",
+      "method": "bounded verbatim excerpt with editorial wrapper",
+      "public_sha256": "1fac042384b8e0c188831837fb816f6906335874ec5bc10c0419f44f1dd25df6"
+    }
+  },
+  "session_metadata": {
+    "control": {
+      "source_jsonl_sha256": "d3880f1d45df3611baeb9275b7b6dd806947d9bf6d32d03d8ad0c8abba3f65cc",
+      "first_record_utc": "2026-09-06T15:17:25.575Z",
+      "last_record_utc": "2026-09-06T15:18:27.173Z",
+      "reported_models": [
+        "claude-sonnet-5"
+      ],
+      "tool_calls": [
+        [
+          "2026-09-06T15:17:29.382Z",
+          "Bash"
+        ],
+        [
+          "2026-09-06T15:17:36.065Z",
+          "Bash"
+        ],
+        [
+          "2026-09-06T15:17:38.180Z",
+          "Bash"
+        ],
+        [
+          "2026-09-06T15:17:42.683Z",
+          "Bash"
+        ],
+        [
+          "2026-09-06T15:17:58.849Z",
+          "Bash"
+        ]
+      ]
+    },
+    "revised": {
+      "source_jsonl_sha256": "338e2ea9415750f7f6c8f2d1907e6d5df36c4b415714b4bff1606ab54f1dc672",
+      "first_record_utc": "2026-09-06T15:17:35.144Z",
+      "last_record_utc": "2026-09-06T15:18:19.181Z",
+      "reported_models": [
+        "claude-sonnet-5"
+      ],
+      "tool_calls": [
+        [
+          "2026-09-06T15:17:38.530Z",
+          "Bash"
+        ],
+        [
+          "2026-09-06T15:17:42.051Z",
+          "Bash"
+        ],
+        [
+          "2026-09-06T15:17:44.078Z",
+          "Bash"
+        ],
+        [
+          "2026-09-06T15:17:47.109Z",
+          "Bash"
+        ],
+        [
+          "2026-09-06T15:17:49.907Z",
+          "Bash"
+        ],
+        [
+          "2026-09-06T15:17:53.678Z",
+          "Bash"
+        ]
+      ]
+    }
+  },
+  "chronology": {
+    "269fa140f": "269fa140f2ff325c2c7fea2db866a76dafa24521 2026-09-06T11:10:29-04:00 WALTER: pilot scope v2 \u2014 test EXECUTION not comprehension, add the control arm",
+    "4c5482939": "4c54829396d1b212092b620b91f85dd2dcbaa8e3 2026-09-06T11:18:08-04:00 WALTER: pilot PRE-REGISTRATION \u2014 rubric + fixture + a disclosed asymmetry, before results",
+    "100282027": "100282027d83fd7f37ee237dbbb17c8ec8ca310c 2026-09-06T11:19:57-04:00 WALTER: pilot RESULTS \u2014 both arms 4/4, the test did not discriminate, C3 went the wrong way",
+    "ddd3713ae": "ddd3713aea3251cadf8eaa2ae7cc820dbf5a9cb2 2026-09-06T11:33:41-04:00 WALTER: pilot \u2014 preserve the RAW records, withdraw three claims that did not survive review",
+    "1bd4dab90": "1bd4dab90abf475f6fbcf6e301e94852f0442374 2026-09-06T11:39:13-04:00 WALTER: pilot CLOSED \u2014 passed on the tested exercise; the finding that outlives it"
+  }
+}

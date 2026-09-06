@@ -1,5 +1,7 @@
 # Case 3 — VIOLET: Detection, Delivery Failure, and Adaptation
 
+**Evidence form:** sanitized historical narrative, introduced in the July 15, 2026 public release. Underlying private source records are not bundled for independent regrading. See [evidence boundaries](../../PORTFOLIO_NOTES.md#evidence-forms-and-dates).
+
 This case documents an operational failure in a volatility and credit-to-vol monitoring agent.
 
 The underlying detectors worked. Two preregistered conditions fired. The same-session review packet required by the gate was not built, delivered, or recorded. The failure remained undiscovered for seven days.
@@ -26,7 +28,7 @@ Instead, it:
 
 ## Editorial note
 
-The source artifacts included a July 9, 2026 backfill memorandum, the historical action-gate row, selected evidence-ledger entries, a maintenance log, a July 11 fresh-look memorandum, and the current canary map.
+The source artifacts included a July 9, 2026 backfill memorandum, the historical action-gate row, selected evidence-ledger entries, a maintenance log, a July 11 fresh-look memorandum, and the canary map held at the July public-release snapshot.
 
 Removed or generalized:
 

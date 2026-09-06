@@ -34,11 +34,15 @@ Some preregistered conditions require an action when they fire. Those conditions
 
 ### State definitions
 
+This is the canonical vocabulary for the normalized public gate examples and agent packages, not a claim that every historical private ledger uses these exact tokens. Task states and gate states are separate interfaces.
+
 - `LIVE`: the condition is active and being checked.
-- `FIRED-UNEXECUTED`: the condition fired but the required action is not evidenced. This blocks unrelated new work until resolved or escalated.
-- `RESOLVED`: the condition was evaluated and its consequence or stand-down was recorded.
+- `FIRED-UNEXECUTED`: the condition fired but the required action is not evidenced. This blocks unrelated new work until resolved or escalated; it does not establish that the action never happened.
+- `RESOLVED`: evidence of the required consequence or an authorized stand-down is recorded. A delivery receipt alone does not establish closure.
 - `LAPSED`: the original action is no longer valid because time or context changed.
 - `RETIRED`: the gate no longer belongs to the active system.
+
+An empty event timestamp means the event is not documented in that record. It may indicate missing work, missing recording, or an event that was not required. Inspect owner artifacts and the required consequence before drawing a conclusion. This uncertainty does not waive an unresolved obligation.
 
 ## Fictional example
 

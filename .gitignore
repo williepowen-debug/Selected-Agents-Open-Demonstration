@@ -1,0 +1,4 @@
+# Local environment and Python caches for the offline case reproduction.
+.venv-demo/
+__pycache__/
+*.pyc

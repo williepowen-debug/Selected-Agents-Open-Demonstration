@@ -37,7 +37,7 @@
 
 **SAM's response:** Independent trigger classes existed, but independence established mechanism rather than probability. SAM accepted a fixed roughly 90-day window spanning two scheduled policy boundaries.
 
-**Public redaction:** The exact deadline is withheld while the original gate remains live. The internal record fixed it before the exchange concluded.
+**Public redaction:** The exact deadline was withheld because the gate remained live at the July 15 public release. Its current status is not represented here. The internal record fixed the deadline before the exchange concluded.
 
 **Verdict:** `SURVIVES` with a hard deadline and downgrade if nothing fires.
 

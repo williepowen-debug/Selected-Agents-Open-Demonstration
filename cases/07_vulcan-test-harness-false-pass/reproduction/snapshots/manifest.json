@@ -1,0 +1,45 @@
+{
+  "source_repository": "private Research-workspace",
+  "source_path": "AGENTS/VULCAN/scripts/test_validate_workbook.py",
+  "extraction": "CASES assignment and run/main definitions, ast.unparse; leading function docstrings removed; executable ASTs compared. Imports and sandbox/validator adapters supplied by runner.",
+  "snapshots": {
+    "before": {
+      "commit": "ffefbafea9ce384c11b50fda88f76593a28df060",
+      "source_sha256": "89f3e5d441aafe5cb7a94e49cacec9d7f0fd72d6f4d6c4c26e10b94ac8de1973",
+      "public_sha256": "d24d6bebb3b9a92fa1e703104d1923838a5a66effeb30abf6f93849ee780fdfa",
+      "selected_spans": {
+        "CASES": [
+          43,
+          78
+        ],
+        "run": [
+          101,
+          103
+        ],
+        "main": [
+          129,
+          158
+        ]
+      }
+    },
+    "after": {
+      "commit": "8c33df2d26958c782b0d097847ebb9599e9f6f8b",
+      "source_sha256": "82b8720b3a68c483b52ff23aab4a3867e78d23ac98e6db60ed0a711db98591fb",
+      "public_sha256": "31af44fa69d0f15457793eb2587304ecab73d9da39535c4456369522aa6db57e",
+      "selected_spans": {
+        "CASES": [
+          47,
+          82
+        ],
+        "run": [
+          105,
+          107
+        ],
+        "main": [
+          133,
+          170
+        ]
+      }
+    }
+  }
+}

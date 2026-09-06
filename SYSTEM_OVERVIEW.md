@@ -1,5 +1,7 @@
 # System Overview
 
+**Snapshot boundary:** this architecture and its runtime descriptions were published July 15, 2026, at public commit `094338bdd5d04976495f7affdbde34406ba6bfe6`. September 6 edits clarify scope and navigation; they are not a new audit of the live runtime. The [portfolio notes](PORTFOLIO_NOTES.md#evidence-forms-and-dates) distinguish this reconstruction from later case evidence.
+
 This repository is a curated view into a larger, human-directed research system. The canonical July 2026 roster contains 28 active specialized agents, plus on-demand, dormant, and architectural roles. Only a few representative cases and six reconstructed agent packages are published here.
 
 The system is best understood as a Git-versioned research institution, not as a collection of character prompts. Agents retain domain ownership across sessions, write claims and uncertainty into inspectable files, exchange bounded handoffs, and leave dated records when their views change.
@@ -38,7 +40,7 @@ RED challenges load-bearing claims, steelmans before attacking, distinguishes ob
 
 ### WALTER — external-signal intake
 
-WALTER filters, deduplicates, archives, and routes incoming external information. It is not the general peer-to-peer message bus. Direct agent messages use a separate file-native control plane that, at the time of this snapshot, was active only for an initial two-recipient cohort.
+WALTER filters, deduplicates, archives, and routes incoming external information. It is not the general peer-to-peer message bus. The July 15 reconstruction described a separate file-native direct-message control plane active only for an initial two-recipient cohort. That scope is historical, not a statement of September deployment coverage.
 
 ### TERRY — downstream construction
 
@@ -59,9 +61,9 @@ The repository serves as institutional memory. A mature agent generally maintain
 
 Git history supplies chronology and makes retroactive rewriting harder. It does not, by itself, guarantee correctness, independence, or good judgment.
 
-## Current capability boundary
+## Capability boundary in the July snapshot
 
-The institution is operational and persistent, but it is not presented as a production-grade distributed-agent runtime.
+The snapshot described an operational, persistent system, not a production-grade distributed-agent runtime:
 
 - Operation is controlled rather than continuously concurrent.
 - Delivery observability is stronger than proof of consumption and integration.
@@ -71,7 +73,7 @@ The institution is operational and persistent, but it is not presented as a prod
 - PROME can become a coordination supernode and clerical bottleneck.
 - Security and runtime durability are not production-grade.
 
-These limitations are part of the research record. The VIOLET case exists precisely because successful detection did not guarantee successful delivery or action.
+These limitations are part of the historical research record. The July VIOLET case exists precisely because successful detection did not guarantee successful delivery or action. Later repairs do not establish that all of these limitations have been resolved.
 
 ## Human authority
 
@@ -83,5 +85,5 @@ The operator retains authority over external communication, public release, arch
 2. Read [PROME orchestration](architecture/prome-orchestration/README.md).
 3. Review the [NEXUS brief schema](architecture/nexus-brief-schema.md).
 4. Browse the [public agent packages](agents/).
-5. Continue through the SAM–RED, BRENT, and VIOLET cases.
+5. Use the [case reading route](README.md#start-here) for substantive research, executable verification, and measurement validity; WALTER's recorded instruction pilot is linked there too.
 6. Finish with [Lessons Learned](LESSONS_LEARNED.md).

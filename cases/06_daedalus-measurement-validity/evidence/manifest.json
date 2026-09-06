@@ -1,0 +1,17 @@
+{
+  "before_commit": "eb6a80d8cbb0d540de0376fa528cf37cad856682",
+  "withdrawal_commit": "0923f5816ff62423200901c15d931c96f9590104",
+  "source_hashes": {
+    "eb6a80d8cbb0d540de0376fa528cf37cad856682": {
+      "AGENTS/DAEDALUS/scripts/scorecard.py": "e5de09263478aefd5c2a3821950955adadf8ca06fbf8433e4137d5012b5fa5cd",
+      "AGENTS/DAEDALUS/scorecards/2026-09-04.md": "23bc09d3f5bcd940f48aaca4bb42b233744655ddec86bc5a2fd3a27bbd38f33b"
+    },
+    "0923f5816ff62423200901c15d931c96f9590104": {
+      "AGENTS/DAEDALUS/scripts/scorecard.py": "11b0f9cb8b64ce04a02c4ff099056a60eabf09fd18423033215a411106c6168e",
+      "AGENTS/DAEDALUS/scorecards/2026-09-04.md": "5a0d8605dfe45ee1db9f0473d6d0974fec8fed5970ea5fd186904373a79d94ee"
+    }
+  },
+  "public_sha256": {
+    "source-excerpts.md": "87af4f74a19d2608a1182de6373560e8afc6c3f175dfe198fc8f9e9d7573e0c9"
+  }
+}

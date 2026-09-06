@@ -41,4 +41,6 @@ The record below expresses the cross-agent gate contract. The canonical ledger r
 gate_id	condition	detected_at	delivered_at	reviewed_at	decided_at	executed_at	state	disposition
 ```
 
-Empty timestamps are evidence. They identify the stage at which the workflow stopped.
+Use the [public gate-state definitions](../../architecture/prome-orchestration/task-lifecycle.md#state-definitions). Event timestamps describe documented stages; they are not additional gate-state tokens.
+
+An empty timestamp establishes that this record does not document the event—not that the event never occurred. Check the owner artifact and whether the stage was required before distinguishing missing work from missing documentation. An unverified consequence remains unresolved; absence of a timestamp alone cannot locate where the actual workflow stopped.

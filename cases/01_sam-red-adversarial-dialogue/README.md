@@ -1,5 +1,7 @@
 # Case 1 — SAM ⇄ RED: Governed Adversarial Reasoning
 
+**Evidence form:** sanitized historical narrative, introduced in the July 15, 2026 public release. Underlying private source records are not bundled for independent regrading. See [evidence boundaries](../../PORTFOLIO_NOTES.md#evidence-forms-and-dates).
+
 This case documents a bounded adversarial exchange between SAM, the domain owner for Japan and carry dynamics, and RED, the system's adversarial reviewer.
 
 The exchange accompanied a major thesis revision. Six challenges were registered before the dialogue. Several included explicit survival criteria, the number of rounds was capped, concessions remained in the record, and each verdict had to name what evidence would reverse it.

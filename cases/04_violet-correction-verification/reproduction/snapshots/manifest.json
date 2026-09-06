@@ -1,0 +1,158 @@
+{
+  "transport_only": {
+    "commit": "7b746e269163d84d0bec02cf1c3e58839e17552c",
+    "source": "AGENTS/VIOLET/scripts/backfill.py",
+    "source_sha256": "030c72e911232aa07f2d0c50bba104be26d9c52c72380f29a7eebfac1bfe18a0",
+    "snapshot_sha256": "1c6aa09c1592abcfea505da6572a14dd05f6f45b9ca4bf1ceb7a01d6fd771264",
+    "source_spans": {
+      "TICKERS": [
+        48,
+        48
+      ],
+      "load_existing": [
+        53,
+        61
+      ],
+      "write_merged": [
+        64,
+        70
+      ],
+      "backfill_spot": [
+        83,
+        198
+      ],
+      "CBOE_HISTORY_URL": [
+        316,
+        316
+      ],
+      "CBOE_SERIES": [
+        321,
+        324
+      ],
+      "CBOE_TOL": [
+        325,
+        325
+      ],
+      "fetch_cboe_history": [
+        328,
+        364
+      ],
+      "fetch_all_cboe": [
+        367,
+        382
+      ],
+      "backfill_spot_cboe": [
+        385,
+        507
+      ],
+      "main": [
+        510,
+        559
+      ]
+    }
+  },
+  "per_run_guard": {
+    "commit": "1e8ae5d00162f3b4b92309ccd3ccd76f7dbab347",
+    "source": "AGENTS/VIOLET/scripts/backfill.py",
+    "source_sha256": "d7e8a0e5ede3cce08ac0f95c5c56cd0a725e41ea85ddc698ab11d9b35a233029",
+    "snapshot_sha256": "2fee368ff36bf142fa35feb1c0bd5fc29c08cd13bd3881f3a5905eaf585b785b",
+    "source_spans": {
+      "TICKERS": [
+        48,
+        48
+      ],
+      "load_existing": [
+        53,
+        61
+      ],
+      "write_merged": [
+        64,
+        70
+      ],
+      "backfill_spot": [
+        83,
+        240
+      ],
+      "CBOE_HISTORY_URL": [
+        358,
+        358
+      ],
+      "CBOE_SERIES": [
+        363,
+        366
+      ],
+      "CBOE_TOL": [
+        367,
+        367
+      ],
+      "fetch_cboe_history": [
+        370,
+        434
+      ],
+      "fetch_all_cboe": [
+        437,
+        452
+      ],
+      "backfill_spot_cboe": [
+        455,
+        594
+      ],
+      "main": [
+        597,
+        649
+      ]
+    }
+  },
+  "stateless_guard": {
+    "commit": "8eec88a841e6ade5096abaeb9a8aa21bc31db3e4",
+    "source": "AGENTS/VIOLET/scripts/backfill.py",
+    "source_sha256": "346c01fe4a6bd4bb82732a96272c2687ed95ab171f6099e509196c1d3d06b501",
+    "snapshot_sha256": "7a64754dd6880bd49a69598e8895674b3b599bc9f2c209df3f2e92ff380975a6",
+    "source_spans": {
+      "TICKERS": [
+        48,
+        48
+      ],
+      "load_existing": [
+        53,
+        61
+      ],
+      "write_merged": [
+        64,
+        70
+      ],
+      "backfill_spot": [
+        83,
+        239
+      ],
+      "CBOE_HISTORY_URL": [
+        357,
+        357
+      ],
+      "CBOE_SERIES": [
+        362,
+        365
+      ],
+      "CBOE_TOL": [
+        366,
+        366
+      ],
+      "fetch_cboe_history": [
+        369,
+        433
+      ],
+      "fetch_all_cboe": [
+        436,
+        451
+      ],
+      "backfill_spot_cboe": [
+        454,
+        609
+      ],
+      "main": [
+        612,
+        661
+      ]
+    }
+  }
+}

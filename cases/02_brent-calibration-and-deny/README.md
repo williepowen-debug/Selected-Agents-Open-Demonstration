@@ -1,5 +1,7 @@
 # Case 2 — BRENT: Calibration and Evidentiary Restraint
 
+**Evidence form:** sanitized historical narrative, introduced in the July 15, 2026 public release. Underlying private source records are not bundled for independent regrading. See [evidence boundaries](../../PORTFOLIO_NOTES.md#evidence-forms-and-dates).
+
 BRENT is a persistent oil and energy-domain agent. This case combines two kinds of evidence:
 
 1. a prediction ledger that extracted recurring calibration patterns; and

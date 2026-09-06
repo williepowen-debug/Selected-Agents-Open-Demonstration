@@ -2,6 +2,8 @@
 
 This directory contains public-safe packages for six representative agents from the larger research system.
 
+**Snapshot:** the packages were introduced July 15, 2026. September 6 edits align public gate vocabulary and clarify evidence limits; they do not synchronize these reconstructions with every live agent change. See [evidence forms and dates](../PORTFOLIO_NOTES.md#evidence-forms-and-dates).
+
 They are closer to the working agents than a character profile or a single prompt: each package defines domain ownership, operating rules, public state, handoff behavior, and an inspectable example. They are still reconstructions. Private working memory, live research state, current thresholds, operational tooling, and internal messaging infrastructure are deliberately absent.
 
 ## Package index
@@ -13,7 +15,7 @@ They are closer to the working agents than a character profile or a single promp
 | SAM | Japan macro and carry transmission | [SAM](SAM/) | [SAM–RED case](../cases/01_sam-red-adversarial-dialogue/) |
 | RED | Adversarial review | [RED](RED/) | [SAM–RED case](../cases/01_sam-red-adversarial-dialogue/) |
 | BRENT | Oil and energy-market research | [BRENT](BRENT/) | [Calibration case](../cases/02_brent-calibration-and-deny/) |
-| VIOLET | Volatility-regime monitoring | [VIOLET](VIOLET/) | [Failure-and-learning case](../cases/03_violet-detection-to-execution-failure/) |
+| VIOLET | Volatility-regime monitoring | [VIOLET](VIOLET/) | [Delivery failure](../cases/03_violet-detection-to-execution-failure/) · [correction verification](../cases/04_violet-correction-verification/) |
 
 ## Common layout
 
