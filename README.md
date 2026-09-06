@@ -2,23 +2,24 @@
 
 I run a persistent, human-directed research system that investigates economic and financial transmission: how an energy shock, a credit constraint, or a policy change moves through other domains. Some thirty specialized agents keep dated claims, predictions, evidence, and disagreements in Git-versioned files. I set the direction and make the consequential calls.
 
-The rule that holds it together is simple to state and hard to keep: **a claim of completion is itself a claim.** A test that passes, a receipt that says delivered, a ratio that computes, a correction that says corrected: each gets checked at the artifact it describes, not at the message about it. Every case here is that rule finding something a green result had missed. A repair that failed on its second run. A test harness that accepted crashing controls. An efficiency ratio whose two inputs counted different things. A thesis that survived only at a lower grade. I publish the failures because they are where the method shows.
+The rule that holds it together is simple to state and hard to keep: **a claim of completion is itself a claim.** A test that passes, a receipt that says delivered, a ratio that computes, a correction that says corrected: each gets checked at the artifact it describes, not at the message about it. Every case here is that rule finding something a green result had missed. A repair that failed on its second run. A test harness that accepted crashing controls. An efficiency ratio whose two inputs counted different things. A thesis that survived only at a lower grade. A desk that was right about India and wrong about Qatar by six times, from the same page. I publish the failures because they are where the method shows.
 
 **Portfolio revision: September 6, 2026.** Episodes, architectural snapshots, and the proposed experiment carry their own dates and evidence boundaries.
 
 ## Start here
 
-Three cases give a short route from substantive research to verification and measurement:
+Four cases give a short route from substantive research to verification and measurement:
 
 | Read | Question | What you can inspect |
 |---|---|---|
 | [SAM–RED: a thesis survives at a lower grade](cases/01_sam-red-adversarial-dialogue/) | What happens when a research claim fails its own survival bar? | A reconstruction of concessions, a confidence downgrade, and two options blocked |
 | [VIOLET: a repair fails on the second run](cases/04_violet-correction-verification/) | Does a correction stay correct once state persists? | Runnable contrasts across three historical implementations, with failure and recovery controls |
 | [DAEDALUS: an efficiency ratio is withdrawn](cases/06_daedalus-measurement-validity/) | Do the logs measure what the scorecard claims? | Pinned source excerpts and a synthetic counterexample |
+| [FERT: right about India, wrong about Qatar](cases/08_fert-matched-pair/) | Does a ledger row's date mean what it says? | Two verbatim graded rows, the March lines they came from, and a check on dates and arithmetic |
 
 The other four: [BRENT's sustain test](cases/02_brent-calibration-and-deny/) denies confirmation even though the price condition passes. [VULCAN's test-harness case](cases/07_vulcan-test-harness-false-pass/) is the technical companion to VIOLET's, a suite that accepted failed control runs and the exact repair. [WALTER's instruction pilot](cases/05_walter-instruction-pilot/) keeps two archived runs and withdraws the interpretations they cannot support. The [earlier VIOLET incident](cases/03_violet-detection-to-execution-failure/) traces a detected condition to an undelivered obligation and a decision not to act late.
 
-Cases 1–3 are sanitized narrative reconstructions. Cases 4–7 bundle source-derived code or excerpts with pinned private revisions and hash manifests.
+Cases 1–3 are sanitized narrative reconstructions. Cases 4–8 bundle source-derived code, excerpts, or ledger rows with pinned private revisions and hash manifests.
 
 ## What I contributed
 
@@ -46,9 +47,12 @@ python3 -B cases/05_walter-instruction-pilot/check_artifacts.py
 
 # DAEDALUS: the excerpt hash and the two-history counterexample
 python3 -B cases/06_daedalus-measurement-validity/counterexample.py
+
+# FERT: evidence hashes, the March and August dates, no probability in either confidence cell, 77 / 12.8
+python3 -B cases/08_fert-matched-pair/check_rows.py
 ```
 
-Each reproduction README states what the harness substitutes and what it leaves out. The VIOLET and VULCAN harnesses execute source-derived production code against synthetic fixtures; the WALTER checker verifies archived records without rerunning models; the DAEDALUS script is an illustration, not a recount of the private logs.
+Each reproduction README states what the harness substitutes and what it leaves out. The VIOLET and VULCAN harnesses execute source-derived production code against synthetic fixtures; the WALTER checker verifies archived records without rerunning models; the DAEDALUS script is an illustration, not a recount of the private logs; the FERT checker verifies the bundled rows and dates, not the graded outcomes' sources.
 
 ## Operating record
 

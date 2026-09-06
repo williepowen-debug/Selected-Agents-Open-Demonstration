@@ -70,6 +70,7 @@ The roster's active count and the count of agent directories with state files us
 | Case 5: WALTER pilot | September 6 recorded runs | Exact instruction files, sanitized tool records, rubric chronology, and editorial behavior grades; not a fresh model run |
 | Case 6: DAEDALUS withdrawal | September 5 correction | Selected pinned report/code excerpts plus a new synthetic illustration; not a full historical census |
 | Case 7: VULCAN test-harness repair | September 6 historical suite revisions | Source-derived suite logic with controlled subprocess exits; not a rerun of the GPU validator or production crashes |
+| Case 8: FERT matched pair | March 20 claims, August 17 grades, September 6 extraction | Verbatim ledger rows and March status lines at pinned revisions; a check on hashes, dates, and arithmetic; graded outcomes not re-sourced |
 | Research-quality protocol | September 6 draft | A prospective design only; no results or frozen preregistration |
 
 The older cases' source descriptions and sanitization notes remain in their READMEs. Exact operational dates or thresholds withheld in July remain withheld; their exclusion does not imply that the same gates are still live in September. The new cases' hashes support comparison with supplied artifacts, not independent authentication of their private origin.

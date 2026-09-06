@@ -48,6 +48,10 @@ The system can make evidence, disagreement, and failure more legible. It does no
 
 [Case 6](cases/06_daedalus-measurement-validity/) withdrew a ratio whose inputs counted different populations without establishing decision timing. Neither a zero in a correction register nor a large number of detected defects measures error prevention by itself. Separately defined raw counts were more defensible than the composite. Withdrawing the interpretation was progress; it did not make every surviving label valid or establish better system performance.
 
+## 12. A ledger row's date is the claim's date, not the registration's
+
+[Case 8](cases/08_fert-matched-pair/) shows two rows dated March 20 that entered the ledger on August 17 and were graded the same day. The pre-outcome evidence is the earliest commit that carries the claim; the ledger is where the grade lands. Neither claim carried a probability, so the hit is a correct call rather than a calibration observation, and the miss was a denominator written as a numerator under the thesis's load-bearing word.
+
 ## Open research questions
 
 - How should message consumption and integration be measured without producing compliance theater?

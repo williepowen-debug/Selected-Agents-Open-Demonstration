@@ -1,0 +1,59 @@
+{
+  "source_repository": "private operating repository",
+  "ledger_path": "AGENTS/FERT/workbook/PREDICTIONS.tsv",
+  "commits": {
+    "march_snapshot": {
+      "commit": "0087ee84eb4b53cd4c03118bfdc7d9f1ce6bae1b",
+      "date": "2026-03-20T01:15:00+00:00",
+      "note": "FERT desk bootstrapped; ledger is a bare header; claims live in STATUS.md and CLAUDE.md",
+      "file_sha256": {
+        "AGENTS/FERT/STATUS.md": "1b92730291b05599aa8e62d6106bcc7d13cbf7a2ac3fb997a743efbc7895993a",
+        "AGENTS/FERT/CLAUDE.md": "0bb72a47d378770156678811e7743c0efe7b275347f397b3ee574ffc4c70ae88",
+        "AGENTS/FERT/workbook/PREDICTIONS.tsv": "1512c666fd308ee0e9406b36a8d2644d5fdccda6ee640c28872cc2d0c681efd6"
+      }
+    },
+    "registration_and_grade": {
+      "commit": "aa3e057fdf8b82488510451e6e3b3410b38a3a23",
+      "date": "2026-08-17T11:30:00-04:00",
+      "note": "first live session under the 2026-08-16 re-charter; FERT-08 and FERT-10 enter the ledger and are graded",
+      "file_sha256": {
+        "AGENTS/FERT/workbook/PREDICTIONS.tsv": "595e6977cfb30a1c1b24dc8d8007aa0b62612af8506cbf04801af9037fb29686"
+      }
+    },
+    "current": {
+      "commit": "7a0a32ffc18c5e817f06b5cd99ec3f8aa912e246",
+      "date": "2026-09-06T16:26:00-04:00",
+      "note": "rows FERT-08 and FERT-10 byte-identical to the registration commit",
+      "file_sha256": {
+        "AGENTS/FERT/workbook/PREDICTIONS.tsv": "09a95a3924525834735d08df26276eb43f57f10ffd0e926ff463479b9850d10f"
+      }
+    }
+  },
+  "public_sha256": {
+    "evidence/rows.tsv": "79352ec81769c78d521dc76a3bd24f12c50532a139662b014b731dc4e664527c",
+    "evidence/march_claims.md": "9ea1f77f00c13b9fe257d1b45152fdd451f8b2c3486f193adfd49b144815006a"
+  },
+  "selected_lines": {
+    "AGENTS/FERT/STATUS.md": [
+      15,
+      16,
+      29,
+      31,
+      44,
+      63,
+      64,
+      107
+    ],
+    "AGENTS/FERT/CLAUDE.md": [
+      103,
+      104
+    ]
+  },
+  "fleet_context": {
+    "as_of_commit": "7a0a32ffc18c5e817f06b5cd99ec3f8aa912e246",
+    "ledgers_named_PREDICTIONS.tsv": 44,
+    "rows_with_bare_HIT_token": 13,
+    "rows_with_bare_MISS_token": 14,
+    "method": "grep for a tab-delimited HIT or MISS status cell across files named exactly PREDICTIONS.tsv; other status vocabularies and card-based grades are not counted"
+  }
+}
