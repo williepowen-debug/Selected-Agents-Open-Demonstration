@@ -2,7 +2,7 @@
 
 **A regression suite rejected known invalid inputs but accepted unsuccessful control runs.** When ten otherwise-valid controls were made to return exit code `1`, the original suite still reported `WRONG: 0` and exited successfully. The repaired suite reported ten failures and exited `1` under the same injection.
 
-This September 6, 2026 episode is a companion to [VIOLET's correction-verification case](../04_violet-correction-verification/). It examines the test harness's definition of success. The public reproduction runs historical suite logic with controlled subprocess results; it does not run the underlying GPU validator or measure research productivity.
+This September 6, 2026 episode is a companion to [VIOLET's correction-verification case](../04_violet-correction-verification/). It examines the test harness's definition of success. The public reproduction runs historical suite logic with controlled subprocess results; it does not run the underlying GPU validator.
 
 ## How the test became the subject
 
@@ -51,6 +51,4 @@ The runner checks six version/scenario traces and two controls on the reproducti
 
 A test's result is another claim to verify. Here, a correct validator repair and a passing suite coexisted with an incorrect definition of control success. The decisive evidence was the changed behavior under an unexpected result, alongside preservation of the valid path.
 
-The episode also makes review and rework visible. It does not measure their net cost or establish that adding review always pays. The test was designed retrospectively with knowledge of the defect; there was no blind evaluator or matched workflow comparison. The [planned research-quality pilot](../../experiments/research-quality-pilot.md) addresses that broader question separately and remains unrun.
-
-Will directed the external review and commissioned this portfolio addition. VULCAN produced the operational validator repairs and regression suite. Codex identified the control-exit defect, verified its repair, and prepared this source-derived demonstration under Will's direction. Private market records and operational integrations are excluded. The demonstrated result is one repaired test-harness failure, not comprehensive validation of VULCAN or the research system.
+The test was designed after the defect was known; there was no blind evaluator. Attribution and the boundary of this evidence: [PROVENANCE.md](PROVENANCE.md).

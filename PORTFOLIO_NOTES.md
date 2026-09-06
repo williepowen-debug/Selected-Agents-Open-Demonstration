@@ -4,7 +4,7 @@
 
 ## Operator decisions and attribution
 
-The following choices come from Will's external-review brief supplied in conversation. Short verbatim excerpts are retained here with editorial explanations. This is not an export of the full conversation, a contemporaneous Git record of that brief, or independent authentication of authorship.
+The following choices come from Will's external-review brief, supplied in conversation. Short verbatim excerpts are retained with editorial explanations.
 
 ### 1. Review first; implementation requires permission
 
@@ -20,7 +20,7 @@ The [VIOLET provenance](cases/04_violet-correction-verification/PROVENANCE.md) d
 
 > Verify another desk's state at its owner artifact.
 
-These requirements distinguish an acknowledged request from a changed canonical claim. Will also asked the review to separate detection, diagnosis, owner correction, propagation, closure, recurrence, time, coordination burden, and added complexity. This was a specification of what to evaluate, not a claim that all nine dimensions were measured.
+These requirements distinguish an acknowledged request from a changed canonical claim. Will also asked the review to separate detection, diagnosis, owner correction, propagation, closure, recurrence, time, coordination burden, and added complexity.
 
 The public [gate lifecycle](architecture/prome-orchestration/task-lifecycle.md) preserves the distinction between an unresolved obligation and verified closure. Missing timestamps identify documentation gaps; they cannot alone establish that the underlying action never occurred.
 
@@ -30,15 +30,15 @@ The public [gate lifecycle](architecture/prome-orchestration/task-lifecycle.md) 
 
 > Do not recommend a new mechanism until you identify the measured failure that existing mechanisms cannot handle.
 
-Will made simplification an explicit constraint on recommendations. In the selected episodes, VIOLET removed per-run bookkeeping and DAEDALUS withdrew an invalid ratio. Those particular technical diagnoses and remedies were developed through agent work and external review; the brief does not establish that Will personally invented them or caused each outcome.
+Will made simplification an explicit constraint on recommendations. In the selected episodes, VIOLET removed per-run bookkeeping and DAEDALUS withdrew an invalid ratio. The diagnoses and remedies themselves came from agent work and external review.
 
-The separate July [incident reconstruction](cases/03_violet-detection-to-execution-failure/incident-report.md) records human review classifying a missed action as lapsed rather than replaying it after conditions changed. It is a public narrative account, not an independently authenticated operator transcript.
+The separate July [incident reconstruction](cases/03_violet-detection-to-execution-failure/incident-report.md) records human review classifying a missed action as lapsed rather than replaying it after conditions changed.
 
 ### Division of work
 
 Will designed and operates the broader system, set review requirements, selected work and public cases, and authorized implementation and publication scope. Agents generated research, candidate protocols, code, tests, and proposed corrections. Codex reviewed claims and prepared the September public prose, source extractions, test harness, and synthetic illustration under his direction.
 
-These records support an account of human-directed, AI-assisted work. They do not support sole-human authorship of all technical details, automatic correctness of external review, or measured gains attributable to any one contributor.
+These records support an account of human-directed, AI-assisted work, not sole-human authorship of the technical details.
 
 ## Historical operating record
 
@@ -54,11 +54,11 @@ The table below preserves figures **reported as of July 26, 2026**, in public-re
 | Registered predictions | **411** across 42 ledgers | `find AGENTS -name PREDICTIONS.tsv -exec awk 'FNR>1 && $0!~/^#/ && NF>2' {} \; \| wc -l` |
 | Daily session notes | 128 | `ls memory/2*.md \| wc -l` |
 
-**Measurement limits:** the original commands run against the private operating repository and do not pin its July revision. The file counts also depend on its working tree. Running them against today's state is a new measurement, not a reproduction of this table. The September editorial pass did not independently recount the July inputs; the exact private snapshot behind the counts remains unestablished here.
+**Measurement limits:** the July commands did not pin a private revision, so the July inputs cannot be re-derived. The September refresh in the [README](README.md#operating-record) pins the private commit it was measured at.
 
 The prediction command counts non-comment data rows in files named exactly `PREDICTIONS.tsv`; it does not separately calculate the reported 42-ledger count. The commit-day command calculates the numerator, not the elapsed-calendar-day denominator. Other ledger names and different inclusion rules produce different populations.
 
-The July roster statement of 28 active specialized agents and the count of 38 agent directories with state files use different definitions. Neither is a September roster census. Historical findings, rows, and commits are activity measures, not prevented errors, calibrated forecasts, useful deliverables, or hours saved. Counts can fall as records are archived or reorganized; monotonic growth is not assumed.
+The roster's active count and the count of agent directories with state files use different definitions. Findings, rows, and commits are activity measures, not prevented errors or hours saved, and they can fall as records are archived.
 
 ## Evidence forms and dates
 
@@ -81,21 +81,6 @@ Public task/gate interfaces are normalized teaching examples. Their vocabulary i
 Important evidence is distributed across time: a claim, its original test, a challenge, a revision, and the downstream consequence. These cases collect those steps without exposing current positions, private messages, paid-source text, credentials, or operational integrations.
 
 The selection is deliberately instructive, not representative. It includes failures and retained uncertainty, but cannot estimate their frequency. Architecture and templates provide context; the case-specific artifacts support the narrower results. Domain conclusions are historical research examples, not current recommendations.
-
-## Relationship to humanities-derived methods
-
-Several procedures in this repository resemble practices cultivated in the humanities:
-
-- **source criticism** appears in provenance, freshness, incentive, and independence checks;
-- **argument reconstruction** appears in explicit premises, survival criteria, and adversarial dialogue;
-- **interpretive charity** appears in steelmanning before criticism;
-- **historical contextualization** appears in dated evidence and stale-premise review;
-- **hermeneutic iteration** appears in versioned interpretation and belief revision;
-- **dialectic** appears in bounded disagreement, concession, and synthesis;
-- **rhetorical analysis** appears in attention to source purpose and interested testimony.
-
-This repository does not claim that humanities training automatically produces better AI systems or that these methods belong exclusively to the humanities. It demonstrates that epistemic practices can be translated into agent procedures and evaluated through their artifacts and failure modes.
-
 
 ## Evaluation boundaries
 

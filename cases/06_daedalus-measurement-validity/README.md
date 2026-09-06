@@ -2,7 +2,7 @@
 
 **The arithmetic was right; the measurement was not.** A coordination scorecard reported `correction_efficiency = 28 / (28 + 0) = 1.00`. Review found that its terms counted different populations and did not establish whether errors were caught before or after decisions. DAEDALUS withdrew the ratio from the specification, renderer, and published scorecard on September 5, 2026.
 
-DAEDALUS is the system's architecture and process-design agent. This case illustrates measurement validity—not a measured improvement in prevention, productivity, or overall research quality.
+DAEDALUS is the system's architecture and process-design agent. This case is about measurement validity.
 
 ## What the calculation actually counted
 
@@ -23,7 +23,7 @@ Suppose the same visible logs contain two defect-bearing touches and one correct
 - In one possible underlying history, the two touched errors were caught before a decision and the registered error afterward: two of three were caught before the decision.
 - In another, all three were discovered afterward: zero of three were caught before the decision.
 
-The recorded fields are identical; the quantity one might want to measure differs. This is a **constructed illustration**, not a reconstruction of the historical 28 touches. It shows why the logs alone cannot identify that quantity—even after granting one distinct error per touch for simplicity.
+The recorded fields are identical; the quantity one wants to measure differs. This is a constructed illustration, not the historical 28 touches, and it holds even after granting one distinct error per touch.
 
 Run it with standard-library Python from the repository root:
 
@@ -37,8 +37,8 @@ The script checks the archived excerpt's hash and the illustrative arithmetic. I
 
 The useful change was subtraction: retire the unsupported ratio, retain separately defined raw counts, and explain the incompatibility where the result had been published. No replacement dashboard or composite score was needed to stop this particular overclaim.
 
-The repair was scoped. The historical raw-column names still say “pre-decision” and “post-decision”; the excerpts retain those names rather than silently improving the record. Their chronology remains unestablished. Withdrawing the ratio does **not** validate every surviving scorecard label.
+The repair was scoped. The historical raw-column names still say “pre-decision” and “post-decision”; the excerpts retain those names rather than silently improving the record, and their chronology remains unestablished.
 
 This episode matters because activity records are tempting substitutes for outcomes. Before interpreting any efficiency measure, define its unit, population, coverage, and timing—and verify that its components actually measure those definitions. Sometimes the defensible result is to publish less.
 
-See [provenance](PROVENANCE.md) for pinned revisions and attribution. Will directed and authorized the system's review; Codex challenged the metric; DAEDALUS made the operational withdrawal. Codex prepared this public explanation and synthetic illustration under Will's direction. No controlled system-level benefit is claimed.
+Pinned revisions and attribution: [PROVENANCE.md](PROVENANCE.md).

@@ -8,7 +8,7 @@ Does separating analysis and review improve the reliability of a research delive
 
 The [operating record](../README.md#operating-record) generates hypotheses, but supplies no matched counterfactual. [Case 4](../cases/04_violet-correction-verification/) supplies a reproducible mechanism failure, not an estimate of its prevalence or economic impact.
 
-The completed [WALTER instruction pilot](../cases/05_walter-instruction-pilot/) is a different, two-run exercise—not an execution of this protocol. Its limited comparison and mid-run protocol addendum reinforce the need to freeze this study before running it. The [DAEDALUS metric withdrawal](../cases/06_daedalus-measurement-validity/) motivates explicit units and shared populations for quality/cost measures; historical activity counts cannot substitute for these prospective observations.
+The [WALTER instruction pilot](../cases/05_walter-instruction-pilot/) is a different, two-run exercise; its mid-run addendum is why this study must be frozen before it runs. The [DAEDALUS metric withdrawal](../cases/06_daedalus-measurement-validity/) is why every quality and cost measure below names its unit and population.
 
 ## Smallest useful first comparison
 
@@ -69,4 +69,4 @@ Report task/corpus construction and experimental grading labor separately from t
 - If review adds cost without useful correction, the simpler workflow remains the practical default. Do not respond automatically by adding another reviewer.
 - If the rubric is ambiguous or the workflows receive unequal information, repair the experimental design before drawing a performance conclusion.
 
-The planned output is a compact methods/results note with prompts, synthetic corpus, grading rubric, per-run outputs, and cost accounting. None of those pilot results exists in this repository yet. Ablations of persistent state, adversarial review, and coordination remain longer-term research directions, not what this initial two-condition pilot can establish.
+The planned output is a compact methods/results note with prompts, synthetic corpus, grading rubric, per-run outputs, and cost accounting. Ablations of persistent state, adversarial review, and coordination are later questions.
