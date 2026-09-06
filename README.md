@@ -1,29 +1,37 @@
 # Selected Research-Agent Case Studies
 
+| At a glance | |
+|---|---|
+| **Operated** | since February 1, 2026: 11,364 commits on 214 of 218 days |
+| **Scale** | some thirty specialized agents, 482 registered forecasts, 433 catalogued failure findings |
+| **Result** | the energy desk's fourteen resolved binary forecasts score Brier 0.17 against a 0.25 chance baseline |
+| **Evidence** | nine published cases, six with checks you can run offline in under a minute |
+| **My role** | I designed and operate the system, set its direction and decision rules, and select what is published; agents and an external reviewer produced the analysis, code, and prose under my direction |
+
 I run a persistent, human-directed research system that investigates economic and financial transmission: how an energy shock, a credit constraint, or a policy change moves through other domains. Some thirty specialized agents keep dated claims, predictions, evidence, and disagreements in Git-versioned files. I set the direction and make the consequential calls.
 
-The rule that holds it together is simple to state and hard to keep: **a claim of completion is itself a claim.** A test that passes, a receipt that says delivered, a ratio that computes, a correction that says corrected: each gets checked at the artifact it describes, not at the message about it. Every case here is that rule finding something a green result had missed. A repair that failed on its second run. A test harness that accepted crashing controls. An efficiency ratio whose two inputs counted different things. A thesis that survived only at a lower grade. A desk right about India and wrong about Qatar by six times from the same page, and a ledger that scores kinder on its cells than on its first calls. I publish the failures because they are where the method shows.
+The rule that holds it together is simple to state and hard to keep: **a claim of completion is itself a claim.** A test that passes, a receipt that says delivered, a ratio that computes, a correction that says corrected: each gets checked at the artifact it describes, not at the message about it. Every case here is that rule finding something a green result had missed. A repair that failed on its second run. A test harness that accepted crashing controls. An efficiency ratio whose two inputs counted different things. A thesis that survived only at a lower grade. A desk right about India and wrong about Qatar by six times from the same page. A forecast ledger that beats chance, and beats it by a little less once it is scored on the marks as first made. I publish the failures because they are where the method shows.
 
 **Portfolio revision: September 6, 2026.** Episodes, architectural snapshots, and the proposed experiment carry their own dates and evidence boundaries.
 
 ## Start here
 
-Four cases give a short route from substantive research to verification and measurement:
+Four cases give a short route from substantive research to verification and measurement, about fifteen minutes in all:
 
 | Read | Question | What you can inspect |
 |---|---|---|
 | [SAM–RED: a thesis survives at a lower grade](cases/01_sam-red-adversarial-dialogue/) | What happens when a research claim fails its own survival bar? | A reconstruction of concessions, a confidence downgrade, and two options blocked |
 | [VIOLET: a repair fails on the second run](cases/04_violet-correction-verification/) | Does a correction stay correct once state persists? | Runnable contrasts across three historical implementations, with failure and recovery controls |
 | [DAEDALUS: an efficiency ratio is withdrawn](cases/06_daedalus-measurement-validity/) | Do the logs measure what the scorecard claims? | Pinned source excerpts and a synthetic counterexample |
-| [BRENT: a calibration record, scored on the first call](cases/09_brent-calibration-record/) | How good are the forecasts once you score the mark that was actually made? | Thirty verbatim rows, every mark change with its date, Brier on both marks, three failures in full |
+| [BRENT: fourteen forecasts scored, Brier 0.17 against 0.25](cases/09_brent-calibration-record/) | Did the forecasts beat chance, and does the score survive scoring the marks as first made? | Thirty verbatim rows, every mark change dated, Brier on both marks, three failures in full |
 
-The other five: [FERT's matched pair](cases/08_fert-matched-pair/) grades two claims from one March page, one confirmed and one refuted six times over, and says what a ledger row can hide. [BRENT's sustain test](cases/02_brent-calibration-and-deny/) denies confirmation even though the price condition passes. [VULCAN's test-harness case](cases/07_vulcan-test-harness-false-pass/) is the technical companion to VIOLET's, a suite that accepted failed control runs and the exact repair. [WALTER's instruction pilot](cases/05_walter-instruction-pilot/) keeps two archived runs and withdraws the interpretations they cannot support. The [earlier VIOLET incident](cases/03_violet-detection-to-execution-failure/) traces a detected condition to an undelivered obligation and a decision not to act late.
+The other five are for readers who want depth. [FERT's matched pair](cases/08_fert-matched-pair/) grades two claims from one March page, one confirmed and one refuted six times over, and says what a ledger row can hide. [BRENT's sustain test](cases/02_brent-calibration-and-deny/) denies confirmation even though the price condition passes. [VULCAN's test-harness case](cases/07_vulcan-test-harness-false-pass/) is the technical companion to VIOLET's, a suite that accepted failed control runs and the exact repair. [WALTER's instruction pilot](cases/05_walter-instruction-pilot/) keeps two archived runs and withdraws the interpretations they cannot support. The [earlier VIOLET incident](cases/03_violet-detection-to-execution-failure/) traces a detected condition to an undelivered obligation and a decision not to act late.
 
 Cases 1–3 are sanitized narrative reconstructions. Cases 4–9 bundle source-derived code, excerpts, or ledger rows with pinned private revisions and hash manifests.
 
 ## What I contributed
 
-I designed and operate the system: persistent domain ownership, the coordination and decision boundaries, and the process for keeping and challenging prior claims. Agents propose changes to that design and often make them. Three choices in my September review brief shaped the new cases:
+I have a literature background and am self-taught across trading, systems design, and AI orchestration. I designed and operate the system: persistent domain ownership, the coordination and decision boundaries, and the process for keeping and challenging prior claims. Agents propose changes to that design and often make them. Three choices in my September review brief shaped the new cases:
 
 - **Separate review from authority to implement.** The external reviewer started read-only, with every finding checked at the owning agent's artifact. That allowed broad criticism without granting anyone permission to rewrite another agent's work.
 - **Require evidence of application, not a receipt.** Delivery, consumption, downstream correction, and evidence-backed closure are four different events. A completion message is a lead to inspect, not the test of success.
@@ -89,13 +97,11 @@ Several procedures in this repository are practices cultivated in the humanities
 
 The claim is not that humanities training produces better AI systems. It is that these epistemic practices can be written as procedures and then judged by their artifacts and failure modes.
 
-## Open research question
+## What I would do with support
 
-**Does separating analysis and review improve research quality enough to justify its cost?**
+The question seven months of operation cannot answer from their own history: **does separating analysis and review improve research quality enough to justify its cost?** The operating record supplies hypotheses, not a matched counterfactual; models, protocols, and my own experience changed together, and the cases here were selected for instructiveness rather than sampled.
 
-The [prospective pilot](experiments/research-quality-pilot.md) compares analyst self-review with a role-separated analyst and reviewer, same model, same evidence, same call limit, same token ceiling: 12 constructed tasks, two conditions, two repetitions, 48 runs. Quality, model usage, human verification, and rework would be recorded separately. It has not been run.
-
-The operating history supplies hypotheses, not a matched counterfactual. Models, protocols, and my own experience changed together, and the cases were selected for instructiveness rather than sampled. A result favoring the simpler workflow would be useful.
+The study I would run first is written: the [research-quality pilot](experiments/research-quality-pilot.md) compares analyst self-review with a role-separated analyst and reviewer on the same model, evidence, call limit, and token ceiling, across 12 constructed tasks, two conditions, and two repetitions, 48 runs, with quality, model usage, human verification, and rework recorded separately. It is frozen before any result and it has not been run. A result favoring the simpler workflow would be as useful as one favoring mine.
 
 ## Architecture and further reading
 
