@@ -1,0 +1,26 @@
+# BRENT Predictions — Calibration Record
+# As of 2026-06-01: 10 CONFIRMED / 1 RESOLVED-MECHANISM-ONLY / 2 FAILED / 2 NOT-FIRED-PRECONDITION / 1 PARTIAL / 1 RETIRED / 11 OPEN
+# (3 excluded from calibration math: BRT-18 RETIRED + BRT-20/25 NOT-FIRED-PRECONDITION)
+#
+# DIRECTIONAL FAILURES (read before writing the next industrial-transmission prediction):
+#   BRT-23 @ 70% — DRC SX-EW FM via sulphur cost → outcome via cobalt EXPORT BAN (policy confound, wrong mechanism)
+#   BRT-24 @ 65% — Taiwan industrial rationing if Hormuz >30d → outcome avoided via record US LNG (mitigation channel underweighted)
+#
+# RESOLVED-SPECIAL (threshold-vs-mechanism split per [[finding_threshold_vs_mechanism]] — cross-agent 3-of-3 confirmed):
+#   BRT-22 @ 75% — Dar es Salaam $800/t FCA: MECHANISM CONFIRMED (sulphur transmission firing); THRESHOLD untestable from BRENT data
+#
+# CALIBRATION FINDINGS (apply when writing the next prediction):
+#   - Direct-supply / chokepoint / storage predictions: BRENT systematically UNDER-confident.
+#     Anchor 80-95% when storage math + chokepoint geometry binds. (BRT-06 @ 55% overshot threshold by ~2000%.)
+#   - Industrial-transmission (third-order: oil → input cost → industrial outcome): BRENT systematically OVER-confident.
+#     Anchor 40-55% when chain has 2+ intermediating actors with optionality. (Failure pattern, n=2.)
+#   - No FAILED above 70% conf — high-conviction predictions are reliable. Trust 85%+ calls.
+#
+# PRE-FLIGHT CHECK before writing the next prediction:
+#   (1) Could this fail to fire entirely (nested conditional, out-of-lane, untestable threshold)? If yes, reframe.
+#   (2) What makes it TRUE for wrong reasons? FALSE while thesis holds? If plausible, split mechanism + threshold sub-predictions.
+#   (3) Mechanism attribution explicit ("via X, not Y")?
+#
+# Sort order: chronological by Pred_ID (rows in original insertion order).
+# Closed rows: one-line lesson + archive link inline; full post-mortems → PREDICTIONS_ARCHIVE.md (not boot-loaded).
+#

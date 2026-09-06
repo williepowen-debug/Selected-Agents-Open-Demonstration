@@ -52,6 +52,10 @@ The system can make evidence, disagreement, and failure more legible. It does no
 
 [Case 8](cases/08_fert-matched-pair/) shows two rows dated March 20 that entered the ledger on August 17 and were graded the same day. The pre-outcome evidence is the earliest commit that carries the claim; the ledger is where the grade lands. Neither claim carried a probability, so the hit is a correct call rather than a calibration observation, and the miss was a denominator written as a numerator under the thesis's load-bearing word.
 
+## 13. The scoring mark is the first call
+
+[Case 9](cases/09_brent-calibration-record/) scores one desk's fourteen resolved forecasts twice: on the probability cells as they read today and on the marks first committed. The cells are 0.015 of Brier kinder. Every re-mark was documented in its row; the March re-marks were made within a day of registration, and one was raised after its window had closed. Keep the first call in the scoring cell, date every re-mark beside it, and treat a re-mark after the window as information about the outcome rather than the forecast.
+
 ## Open research questions
 
 - How should message consumption and integration be measured without producing compliance theater?

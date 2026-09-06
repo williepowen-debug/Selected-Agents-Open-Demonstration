@@ -1,0 +1,214 @@
+{
+  "source_repository": "private operating repository",
+  "ledger_paths": {
+    "march_to_may": "AGENTS/BRENT/workbook/PREDICTIONS.tsv",
+    "june_onward": "AGENTS/BRENT/thesis/PREDICTIONS.tsv"
+  },
+  "commits": {
+    "first_rows": {
+      "commit": "dec1eff0d5418cf0e3e81442281bd08a19da2ed7",
+      "date": "2026-03-06T20:02:00+00:00",
+      "note": "desk bootstrapped; BRT-01..06 registered with probabilities",
+      "file_sha256": {
+        "AGENTS/BRENT/workbook/PREDICTIONS.tsv": "825cc667b30d24c075aed864709b7b8feca1ef3ce94a7aee97c6a72a6400c598"
+      }
+    },
+    "march_7_raises": {
+      "commit": "82a3c5644b716817be3a4370f83a944a4af95aa6",
+      "date": "2026-03-07T05:20:00+00:00",
+      "note": "BRT-02 70->85, BRT-03 60->80, BRT-05 82->85 (BRT-05 had moved 70->82 earlier on 3/6)",
+      "file_sha256": {
+        "AGENTS/BRENT/workbook/PREDICTIONS.tsv": "9b657f7615d2aa4777562c2ef1ab3c27901f56a541f637024d45b03c4b351feb"
+      }
+    },
+    "april_16_raise": {
+      "commit": "b2d8e67755c6eb50e22a3722492e72fbab47e6d0",
+      "date": "2026-04-16T14:50:00-04:00",
+      "note": "BRT-04 93->95 after its Q1 window closed; documented in the row's Notes with a dated reason",
+      "file_sha256": {
+        "AGENTS/BRENT/workbook/PREDICTIONS.tsv": "ce111a68d7396459a7ee065882af019d4563af30bd14a8c63694cefc232d1d0a"
+      }
+    },
+    "resolution_pass": {
+      "commit": "03dd65f47ebf59dee539b70b7ead6cc784c04c44",
+      "date": "2026-05-31T13:35:00-04:00",
+      "note": "six date-passed rows resolved"
+    },
+    "ledger_moved": {
+      "commit": "3fcce675a406cbea2ef55f7c715f1e014dd22dad",
+      "date": "2026-06-01T17:28:00-04:00",
+      "note": "ledger re-homed from workbook/ to thesis/; probabilities carried unchanged"
+    },
+    "current": {
+      "commit": "7a0a32ffc18c5e817f06b5cd99ec3f8aa912e246",
+      "date": "2026-09-06T16:26:00-04:00",
+      "file_sha256": {
+        "AGENTS/BRENT/thesis/PREDICTIONS.tsv": "4626759c98cf3ec28b5aeebbfca48cb281ee20f6250f4bc21f329fe641e6bbf5"
+      }
+    }
+  },
+  "history_walk": {
+    "commits_touching_either_path": 46,
+    "order": "git log --reverse over both paths (commit order)",
+    "first_call_definition": "the Confidence cell in the earliest commit containing the row",
+    "columns": "id, commit, date, Confidence cell, Status cell, Notes cell at each commit where the Confidence cell changed"
+  },
+  "public_sha256": {
+    "evidence/rows.tsv": "898be34e587d12db497b36e147950dd59116282770142ce2f496f27fff9d0952",
+    "evidence/mark_history.tsv": "886235aab19f4fa97353149cd68b78a070b2e66a08127d38458d7d3fea3347e3",
+    "evidence/contemporaneity.tsv": "a5f03ed03e4a49a3e600da78883ed2f9b112f140221113d0f23ff20a2609129b",
+    "evidence/ledger_header_2026-06-01.txt": "d3ad3d2b4f6f426d72643aa85aeecd89431e0e0849ac91d016fcd756b004770f"
+  },
+  "redactions": {
+    "marker": "[redacted: position reference]",
+    "count": 5,
+    "items": [
+      {
+        "row": "BRT-06",
+        "column": 8,
+        "column_name": "Outcome",
+        "redacted_chars": 16
+      },
+      {
+        "row": "BRT-06",
+        "column": 10,
+        "column_name": "Notes",
+        "redacted_chars": 16
+      },
+      {
+        "row": "BRT-15",
+        "column": 8,
+        "column_name": "Outcome",
+        "redacted_chars": 79
+      },
+      {
+        "row": "BRT-15",
+        "column": 8,
+        "column_name": "Outcome",
+        "redacted_chars": 14
+      },
+      {
+        "row": "BRT-15",
+        "column": 8,
+        "column_name": "Outcome",
+        "redacted_chars": 36
+      }
+    ],
+    "rule": "only phrases describing an entry, a held equity position, or an entry decision; market prices, claims, and outcomes are verbatim"
+  },
+  "scoring": {
+    "binary_rule": "CONFIRMED or HIT = 1, FAILED = 0; every other status excluded; a row whose Date_Resolved precedes its first commit is excluded by this case (the desk counts it)",
+    "excluded_resolved_before_registration": [
+      "BRT-06"
+    ],
+    "n_binary": 14,
+    "brier_current_cells": 0.1707,
+    "brier_first_call": 0.1854,
+    "gap": 0.0146,
+    "always_half_baseline": 0.25,
+    "current_mark_rule": "the LAST percentage in the Confidence cell",
+    "first_call_rule": "the FIRST percentage in the cell at the row's earliest commit",
+    "binary_rows": [
+      {
+        "id": "BRT-01",
+        "p_now": 0.65,
+        "p_first": 0.65,
+        "y": 1
+      },
+      {
+        "id": "BRT-02",
+        "p_now": 0.85,
+        "p_first": 0.7,
+        "y": 1
+      },
+      {
+        "id": "BRT-03",
+        "p_now": 0.8,
+        "p_first": 0.6,
+        "y": 1
+      },
+      {
+        "id": "BRT-04",
+        "p_now": 0.95,
+        "p_first": 0.8,
+        "y": 1
+      },
+      {
+        "id": "BRT-05",
+        "p_now": 0.85,
+        "p_first": 0.7,
+        "y": 1
+      },
+      {
+        "id": "BRT-10",
+        "p_now": 0.78,
+        "p_first": 0.78,
+        "y": 1
+      },
+      {
+        "id": "BRT-11",
+        "p_now": 0.88,
+        "p_first": 0.88,
+        "y": 1
+      },
+      {
+        "id": "BRT-13",
+        "p_now": 0.7,
+        "p_first": 0.7,
+        "y": 1
+      },
+      {
+        "id": "BRT-14",
+        "p_now": 0.8,
+        "p_first": 0.8,
+        "y": 1
+      },
+      {
+        "id": "BRT-15",
+        "p_now": 0.9,
+        "p_first": 0.85,
+        "y": 0
+      },
+      {
+        "id": "BRT-17",
+        "p_now": 0.75,
+        "p_first": 0.75,
+        "y": 1
+      },
+      {
+        "id": "BRT-23",
+        "p_now": 0.7,
+        "p_first": 0.7,
+        "y": 0
+      },
+      {
+        "id": "BRT-24",
+        "p_now": 0.65,
+        "p_first": 0.65,
+        "y": 0
+      },
+      {
+        "id": "BRT-27",
+        "p_now": 0.55,
+        "p_first": 0.55,
+        "y": 1
+      }
+    ]
+  },
+  "moved_rows": [
+    "BRT-02",
+    "BRT-03",
+    "BRT-04",
+    "BRT-05",
+    "BRT-15",
+    "BRT-26",
+    "BRT-28"
+  ],
+  "desk_context": {
+    "as_of_commit": "7a0a32ffc18c5e817f06b5cd99ec3f8aa912e246",
+    "days_with_commits_touching_AGENTS_BRENT": 134,
+    "calendar_days_2026-03-06_to_2026-09-06": 185,
+    "ledger_commits_walked": 46,
+    "method": "git log dates over AGENTS/BRENT, unique days; not bundled, offered as scale"
+  }
+}
