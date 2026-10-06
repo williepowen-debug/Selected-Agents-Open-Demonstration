@@ -1,0 +1,61 @@
+{
+  "source_repository": "private operating repository",
+  "pins": {
+    "current": "7d15d5c9200e802d0c702884c6655f6e6d53ef7d",
+    "rule_first_committed": "b50c6adad3b14f392a5c8cd55c719fe7bcda99e4"
+  },
+  "files": {
+    "rule_2026-07-02.txt": {
+      "commit": "b50c6adad3b14f392a5c8cd55c719fe7bcda99e4",
+      "path": "AGENTS/LABOR/STATUS.md",
+      "private_file_sha256": "90b30cb1d8ac4f2a8a8d928e57bf87267dcd7a4cff063cccb25ba9c013e7c2ee",
+      "public_sha256": "6640ed531bd9f275dafe9c7e27c54bfc7a3bc7f8945d59df2e9633f7f971f06c"
+    },
+    "kb_rows.tsv": {
+      "commit": "7d15d5c9200e802d0c702884c6655f6e6d53ef7d",
+      "path": "AGENTS/LABOR/workbook/KB.tsv",
+      "rows": [
+        "KB-LAB-108",
+        "KB-LAB-137",
+        "KB-LAB-194",
+        "KB-LAB-201"
+      ],
+      "private_file_sha256": "83427b3b861b2faaeb2e2508358bf7d1541a5a10ef8fafebb950becfc61cb198",
+      "public_sha256": "e43c72025bcce53a4a57e610d7757f5fb932e4e0407c47a63f2910f755277cdd"
+    },
+    "lab11_row.tsv": {
+      "commit": "7d15d5c9200e802d0c702884c6655f6e6d53ef7d",
+      "path": "AGENTS/LABOR/workbook/PREDICTIONS.tsv",
+      "private_file_sha256": "2469a25810a482f547333ed4d62275a5191fcc989677cccbe78d8ec374669e30",
+      "public_sha256": "2c08ede209fd1dd2068bc5b73cedaa03e1c54fb3ab354906b1c3f5758c1487dc"
+    },
+    "grading_card_2026-10-01.md": {
+      "commit": "7d15d5c9200e802d0c702884c6655f6e6d53ef7d",
+      "path": "AGENTS/LABOR/docket/graded/GRADING_CARD_20261001_Challenger.md",
+      "private_file_sha256": "57c4914db56ad2fa75ed21fa1951b5813f4c9032acbc40ac3161c2315b0569c7",
+      "public_sha256": "57c4914db56ad2fa75ed21fa1951b5813f4c9032acbc40ac3161c2315b0569c7"
+    }
+  },
+  "timeline": {
+    "rule_first_committed": {
+      "commit": "b50c6adad3b14f392a5c8cd55c719fe7bcda99e4",
+      "time": "2026-07-02T10:49:29-04:00"
+    },
+    "card_first_committed": {
+      "commit": "b0e1f8b5fff0d5f9f032b540a178e7ac7a11fc6c",
+      "time": "2026-09-29T13:11:03-04:00"
+    },
+    "card_amendment_1_committed": {
+      "commit": "d09db5fe4",
+      "time": "2026-09-29T13:26:55-04:00"
+    },
+    "september_report_release": "2026-10-01T05:30:00-04:00",
+    "card_graded_committed": {
+      "commit": "5a339a6db",
+      "time": "2026-10-01T12:23:55-04:00"
+    },
+    "august_report_release": "2026-09-03",
+    "august_report_captured": "2026-09-29"
+  },
+  "note": "Private-file hashes support comparison by a reviewer with access; this bundle cannot authenticate them on its own."
+}

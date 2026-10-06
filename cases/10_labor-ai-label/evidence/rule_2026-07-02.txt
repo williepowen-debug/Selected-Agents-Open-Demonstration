@@ -1,0 +1,2 @@
+| # | Vector | Score | Δ | Key Signal | Indep | If-falsified → ACTION |
+| 5 | AI displacement | **4** 🔴 | flat | AI #1 Challenger reason **4th straight mo** (since Mar-26; 14,029 = 31% Jun); tech YTD 139,156 **+83% YoY** (clean, non-DOGE comp); Cisco WARN 471 AI-framed | Level cooled with v2; the *share/persistence* is the independent signal | AI share <20% ×2 mo + tech YTD growth <+20% → demote to 2; LAB-11 re-frame |
