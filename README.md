@@ -5,12 +5,12 @@
 | **Operated** | since February 1, 2026: 16,594 commits on 243 of 247 days |
 | **Scale** | some thirty specialized agents, 511 registered forecasts, 482 catalogued failure findings |
 | **Result** | scored as first made, the energy desk's sixteen resolved forecasts reach Brier 0.191: better than a coin (0.25), not yet better than always forecasting their own 75% hit rate (0.1875); 0.170 after later re-marks |
-| **Evidence** | nine published cases, six with offline checks that each run in under a minute once installed (one needs pandas) |
+| **Evidence** | ten published cases, seven with offline checks that each run in under a minute once installed (one needs pandas) |
 | **My role** | I designed and operate the system, set its direction and decision rules, and select what is published; agents and an external reviewer produced the analysis, code, and prose under my direction |
 
 I run a persistent, human-directed research system that investigates economic and financial transmission: how an energy shock, a credit constraint, or a policy change moves through other domains. Some thirty specialized agents keep dated claims, predictions, evidence, and disagreements in Git-versioned files. I set the direction and make the consequential calls.
 
-The rule that holds it together is simple to state and hard to keep: **a claim of completion is itself a claim.** A test that passes, a receipt that says delivered, a ratio that computes, a correction that says corrected: each gets checked at the artifact it describes, not at the message about it. Every case here is that rule finding something a green result had missed. A repair that failed on its second run. A test harness that accepted crashing controls. An efficiency ratio whose two inputs counted different things. A thesis that survived only at a lower grade. A desk right about India and wrong about Qatar by six times from the same page. A forecast ledger that beats chance but, scored on its first calls, not its own hit rate. I publish the failures because they are where the method shows.
+The rule that holds it together is simple to state and hard to keep: **a claim of completion is itself a claim.** A test that passes, a receipt that says delivered, a ratio that computes, a correction that says corrected: each gets checked at the artifact it describes, not at the message about it. Every case here is that rule finding something a green result had missed. A repair that failed on its second run. A test harness that accepted crashing controls. An efficiency ratio whose two inputs counted different things. A thesis that survived only at a lower grade. A desk right about India and wrong about Qatar by six times from the same page. A layoff label that fell by four fifths in a month, read as a label and not as a measure of what AI does. A forecast ledger that beats chance but, scored on its first calls, not its own hit rate. I publish the failures because they are where the method shows.
 
 **Portfolio revision: October 5, 2026** (operating record and case 9 re-pinned; other cases as of September 6). Episodes, architectural snapshots, and the proposed experiment carry their own dates and evidence boundaries.
 
@@ -25,9 +25,9 @@ Four cases give a short route from substantive research to verification and meas
 | [VIOLET: a repair fails on the second run](cases/04_violet-correction-verification/) | Does a correction stay correct once state persists? | Runnable contrasts across three historical implementations, with failure and recovery controls |
 | [DAEDALUS: an efficiency ratio is withdrawn](cases/06_daedalus-measurement-validity/) | Do the logs measure what the scorecard claims? | Pinned source excerpts and a synthetic counterexample |
 
-The other five are for readers who want depth. [SAM–RED](cases/01_sam-red-adversarial-dialogue/) reconstructs an adversarial exchange in which a thesis failed its own survival bar and survived at a lower grade, with two options blocked. [BRENT's sustain test](cases/02_brent-calibration-and-deny/) denies confirmation even though the price condition passes. [VULCAN's test-harness case](cases/07_vulcan-test-harness-false-pass/) is the technical companion to VIOLET's, a suite that accepted failed control runs and the exact repair. [WALTER's instruction pilot](cases/05_walter-instruction-pilot/) keeps two archived runs and withdraws the interpretations they cannot support. The [earlier VIOLET incident](cases/03_violet-detection-to-execution-failure/) traces a detected condition to an undelivered obligation and a decision not to act late.
+The other six are for readers who want depth. [LABOR's AI-label case](cases/10_labor-ai-label/) follows the share of layoffs employers attributed to AI from 31% to 9% while technology-sector cuts stayed far above last year's pace, and a rule written in July that kept the desk from reading the drop as less displacement. [SAM–RED](cases/01_sam-red-adversarial-dialogue/) reconstructs an adversarial exchange in which a thesis failed its own survival bar and survived at a lower grade, with two options blocked. [BRENT's sustain test](cases/02_brent-calibration-and-deny/) denies confirmation even though the price condition passes. [VULCAN's test-harness case](cases/07_vulcan-test-harness-false-pass/) is the technical companion to VIOLET's, a suite that accepted failed control runs and the exact repair. [WALTER's instruction pilot](cases/05_walter-instruction-pilot/) keeps two archived runs and withdraws the interpretations they cannot support. The [earlier VIOLET incident](cases/03_violet-detection-to-execution-failure/) traces a detected condition to an undelivered obligation and a decision not to act late.
 
-Cases 1–3 are sanitized narrative reconstructions. Cases 4–9 bundle source-derived code, excerpts, or ledger rows with pinned private revisions and hash manifests.
+Cases 1–3 are sanitized narrative reconstructions. Cases 4–10 bundle source-derived code, excerpts, or ledger rows with pinned private revisions and hash manifests.
 
 ## What I contributed
 
@@ -41,7 +41,7 @@ The brief excerpts are in [operator decisions and attribution](PORTFOLIO_NOTES.m
 
 ## What you can run
 
-Each September case ships an offline check. From the repository root:
+Cases 4 to 10 each ship an offline check. From the repository root:
 
 ```bash
 # VIOLET: 21 expected traces across three snapshots, plus 2 negative controls (needs pandas 3.0.3)
@@ -61,9 +61,12 @@ python3 -B cases/08_fert-matched-pair/check_rows.py
 
 # BRENT: evidence hashes, status counts, Brier on current cells and on first calls against the base rate, the seven moved marks and their dates
 python3 -B cases/09_brent-calibration-record/check_calibration.py
+
+# LABOR: evidence hashes, every figure against the desk's rows, exact shares and growth, the rule and card dated before the data
+python3 -B cases/10_labor-ai-label/check_case.py
 ```
 
-Each reproduction README states what the harness substitutes and what it leaves out. The VIOLET and VULCAN harnesses execute source-derived production code against synthetic fixtures; the WALTER checker verifies archived records without rerunning models; the DAEDALUS script is an illustration, not a recount of the private logs; the FERT and BRENT checkers verify the bundled rows, dates, and scores, not the graded outcomes' sources.
+Each reproduction README states what the harness substitutes and what it leaves out. The VIOLET and VULCAN harnesses execute source-derived production code against synthetic fixtures; the WALTER checker verifies archived records without rerunning models; the DAEDALUS script is an illustration, not a recount of the private logs; the FERT, BRENT and LABOR checkers verify the bundled rows, dates, and scores, not the graded outcomes' sources.
 
 ## Operating record
 
