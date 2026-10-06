@@ -4,7 +4,7 @@ This directory runs seven scenarios against three frozen source-derived snapshot
 
 ## Setup and run
 
-Requires Python 3.11 or newer. Verified locally with **Python 3.12.3 and pandas 3.0.3** on September 6, 2026. Other Python versions have not been tested for this package.
+Requires Python 3.11 or newer. Verified locally with **Python 3.12.3 and pandas 3.0.3** on September 6, 2026, and re-run with Python 3.12 and pandas 3.0.3 on October 5, 2026. Other Python versions have not been tested for this package.
 
 From the repository root, a separate environment can be prepared with:
 
