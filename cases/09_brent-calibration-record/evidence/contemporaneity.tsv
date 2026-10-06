@@ -29,3 +29,4 @@ BRT-27	2026-06-08	3fcce675a406cbea2ef55f7c715f1e014dd22dad	2026-06-01	55%
 BRT-28	2026-06-08	3fcce675a406cbea2ef55f7c715f1e014dd22dad	2026-06-01	45%
 BRT-29	2026-07-21	995a35bdfcc62d6ac24833af0a09d01af2c502b1	2026-07-21	55%
 BRT-30	2026-08-28	37955e32fc6deb3febe38f23d03717f081ec2ea1	2026-08-28	80%
+BRT-31	2026-10-01	85d7d18781dcfb36e2df8f05a644872ded2772c8	2026-10-01	40% [Date_Made 2026-10-01; first call = P(MET | not NOT-FIRED), BRT-29 convention; base graded by the letter: NOT-FIRED 22%, if fired MET 46 / NOT MET 32 / NV 22; equal-weight MET 43; carries >= ±15 pts]

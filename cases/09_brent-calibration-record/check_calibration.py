@@ -31,14 +31,14 @@ def main():
 
     with (EV / "rows.tsv").open(encoding="utf-8", newline="") as fh:
         rows = {r["Pred_ID"]: r for r in csv.DictReader(fh, **TSV)}
-    if len(rows) != 30:
-        fail(f"expected 30 rows, found {len(rows)}")
+    if len(rows) != 31:
+        fail(f"expected 31 rows, found {len(rows)}")
     counts = Counter(head(r["Status"]) for r in rows.values())
-    want = {"CONFIRMED": 11, "HIT": 1, "FAILED": 3, "RESOLVED": 4, "NOT-FIRED-PRECONDITION": 3,
-            "PARTIAL": 1, "VOID": 1, "RETIRED-OUT-OF-LANE": 1, "OPEN": 5}
+    want = {"CONFIRMED": 12, "HIT": 1, "FAILED": 4, "RESOLVED": 4, "NOT-FIRED-PRECONDITION": 3,
+            "PARTIAL": 1, "VOID": 2, "RETIRED-OUT-OF-LANE": 1, "OPEN": 3}
     if dict(counts) != want:
         fail(f"status counts {dict(counts)} != {want}")
-    print("PASS: 30 rows; 11 CONFIRMED + 1 HIT, 3 FAILED, 4 RESOLVED with a qualifier, 3 NOT-FIRED-PRECONDITION, 1 PARTIAL, 1 VOID, 1 RETIRED, 5 OPEN.")
+    print("PASS: 31 rows; 12 CONFIRMED + 1 HIT, 4 FAILED, 4 RESOLVED with a qualifier, 3 NOT-FIRED-PRECONDITION, 1 PARTIAL, 2 VOID, 1 RETIRED, 3 OPEN.")
 
     hdr = (EV / "ledger_header_2026-06-01.txt").read_text(encoding="utf-8")
     for needle in ("(3 excluded from calibration math", "No FAILED above 70% conf"):
@@ -80,8 +80,16 @@ def main():
     k = sum(y for *_, y in binary); base = k / n; b_base = base * (1 - base)
     print(f"NOTE: {k} of {n} scored rows resolved yes ({base:.1%}); always forecasting that rate scores {b_base:.4f}. "
           f"Latest marks {b_now - b_base:+.4f} and first calls {b_first - b_base:+.4f} against it (negative is better).")
+    if abs(b_base - sc["always_base_rate_baseline"]) > 5e-4:
+        fail(f"base-rate Brier {b_base:.4f} != manifest {sc['always_base_rate_baseline']}")
+    # BRT-26's 85% was set on 2026-09-06, as its window shrank; scoring it at its prior 58% isolates that re-mark.
+    b_58 = sum(((0.58 if rid == "BRT-26" else p) - y) ** 2 for rid, p, _, y in binary) / n
+    print(f"NOTE: with BRT-26 at its pre-September 58% instead of 85%, latest marks score {b_58:.4f} ({b_58 - b_base:+.4f} against the base rate).")
 
-    moved = {rid for rid, h in hist.items() if len({m for x in h for m in marks(x["confidence_cell"])}) > 1 or len(marks(rows[rid]["Confidence"])) > 1}
+    # A row moved if its leading mark changed between commits or its cell records a dated re-mark. BRT-31's cell
+    # carries several conditional percentages in one first call; that is not a re-mark.
+    moved = {rid for rid, h in hist.items()
+             if len({marks(x["confidence_cell"])[0] for x in h if marks(x["confidence_cell"])}) > 1 or "re-marked" in rows[rid]["Confidence"]}
     if moved != {"BRT-02", "BRT-03", "BRT-04", "BRT-05", "BRT-15", "BRT-26", "BRT-28"}:
         fail(f"moved-mark set {sorted(moved)} unexpected")
     last = {rid: hist[rid][-1]["date"] for rid in moved}
@@ -98,22 +106,25 @@ def main():
     if not (last["BRT-28"] == "2026-06-08" == rows["BRT-28"]["Date_Made"] and marks(hist["BRT-28"][0]["confidence_cell"]) == [0.45]):
         fail("BRT-28: expected 45% at first commit and a 2026-06-08 change matching its stated date")
     m26 = marks(rows["BRT-26"]["Confidence"])
-    if not (m26 == [0.60, 0.58, 0.85] and "re-marked 2026-09-06" in rows["BRT-26"]["Confidence"] and head(rows["BRT-26"]["Status"]) == "OPEN"):
-        fail("BRT-26: expected an open row whose cell carries 60% -> 58% -> 85% with a 2026-09-06 re-mark")
+    if not (m26 == [0.60, 0.58, 0.85] and "re-marked 2026-09-06" in rows["BRT-26"]["Confidence"] and head(rows["BRT-26"]["Status"]) == "CONFIRMED"
+            and last["BRT-26"] == "2026-09-06" < rows["BRT-26"]["Date_Resolved"] == "2026-09-25"):
+        fail("BRT-26: expected a confirmed row whose cell carries 60% -> 58% -> 85%, the 85% committed 2026-09-06 and graded 2026-09-25")
+    if not (marks(rows["BRT-31"]["Confidence"])[0] == 0.40 and head(rows["BRT-31"]["Status"]) == "OPEN" and len(hist["BRT-31"]) == 1):
+        fail("BRT-31: expected an open row first called at 40% and never re-marked")
     if "UPGRADED from 70%. Day-by-day model confirms" not in "".join(x["notes_at_that_commit"] for x in hist["BRT-02"]):
         fail("BRT-02: the March 7 note quoted in the README is not in mark_history")
     h05 = hist["BRT-05"]
     if not (len(h05) == 3 and marks(h05[1]["confidence_cell"]) == [0.82] and marks(h05[2]["confidence_cell"]) == [0.85]
             and h05[1]["notes_at_that_commit"] == h05[2]["notes_at_that_commit"] and "Upgraded from 70%" in h05[2]["notes_at_that_commit"]):
         fail("BRT-05: expected 70 -> 82 -> 85 with the 85% note unchanged from the 82% note and still reading 'Upgraded from 70%'")
-    print("PASS: seven rows moved a mark. BRT-02/03/05/15 settled by 2026-03-07 inside their windows; BRT-04's last two points moved 2026-04-16, after its Q1 window and before its grade; BRT-28 moved on its stated date; BRT-26 (open) carries three dated marks in its cell; BRT-05's 82->85 step carries no new note.")
+    print("PASS: seven rows moved a mark. BRT-02/03/05/15 settled by 2026-03-07 inside their windows; BRT-04's last two points moved 2026-04-16, after its Q1 window and before its grade; BRT-28 moved on its stated date; BRT-26 carries three dated marks in its cell, the 85% committed 2026-09-06 and graded 2026-09-25; BRT-05's 82->85 step carries no new note.")
 
     late = {rid: (r["date_made"], r["first_commit_date"]) for rid, r in ct.items() if r["date_made"] != r["first_commit_date"]}
     next_day = {rid for rid, (dm, fc) in late.items() if dm == "2026-03-06" and fc == "2026-03-07"}
     others = {rid for rid in late if rid not in next_day}
     if others != {"BRT-06", "BRT-27", "BRT-28"} or ct["BRT-27"]["first_call_confidence"] != "55%" or ct["BRT-28"]["first_call_confidence"] != "45%":
         fail(f"contemporaneity exceptions {sorted(others)} or first calls unexpected")
-    print(f"PASS: {30 - len(late)} rows committed on their stated date, {len(next_day)} the next day; exceptions BRT-06 (dated 2026-02-18, committed 2026-03-06), BRT-27 (55%) and BRT-28 (45%) first committed 2026-06-01 and dated 2026-06-08.")
+    print(f"PASS: {len(ct) - len(late)} rows committed on their stated date, {len(next_day)} the next day; exceptions BRT-06 (dated 2026-02-18, committed 2026-03-06), BRT-27 (55%) and BRT-28 (45%) first committed 2026-06-01 and dated 2026-06-08.")
 
     marker = manifest["redactions"]["marker"]; text = (EV / "rows.tsv").read_text(encoding="utf-8")
     if text.count(marker) != manifest["redactions"]["count"]:
@@ -124,6 +135,10 @@ def main():
         if line[col - 1].count(marker) != k:
             fail(f"{rid} column {col}: {line[col - 1].count(marker)} markers, manifest says {k}")
     print(f"PASS: {manifest['redactions']['count']} position-reference redaction markers in {len(cells)} cells, as the manifest lists them.")
+    op = manifest["redactions_operational"]
+    if text.count(op["marker"]) != op["count"] or [l for l in text.splitlines() if op["marker"] in l][0].split("\t")[0] != op["items"][0]["row"]:
+        fail("credential-configuration redaction marker not where the manifest lists it")
+    print(f"PASS: {op['count']} credential-configuration redaction marker in {op['items'][0]['row']}, as the manifest lists it.")
     b23 = rows["BRT-23"]
     print(f"NOTE: BRT-23 status is {head(b23['Status'])}; its outcome text {'also says' if 'NOT-FIRED' in b23['Outcome'] else 'does not say'} NOT-FIRED. This case scores the Status column.")
     print("Not checked here: the outcomes' cited sources, the desk-context counts in the manifest, or any private file.")
