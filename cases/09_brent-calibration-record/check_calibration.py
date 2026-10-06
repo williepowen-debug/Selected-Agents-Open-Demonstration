@@ -84,7 +84,9 @@ def main():
         fail(f"base-rate Brier {b_base:.4f} != manifest {sc['always_base_rate_baseline']}")
     # BRT-26's 85% was set on 2026-09-06, as its window shrank; scoring it at its prior 58% isolates that re-mark.
     b_58 = sum(((0.58 if rid == "BRT-26" else p) - y) ** 2 for rid, p, _, y in binary) / n
-    print(f"NOTE: with BRT-26 at its pre-September 58% instead of 85%, latest marks score {b_58:.4f} ({b_58 - b_base:+.4f} against the base rate).")
+    if not (b_now < b_base < b_first and b_58 < b_base and abs(b_58 - 0.1793) < 5e-4):
+        fail(f"expected latest < base rate < first call, and BRT-26-at-58% {b_58:.4f} below the base rate at 0.1793")
+    print(f"PASS: latest marks beat the base rate, first calls do not; with BRT-26 at its pre-September 58% instead of 85%, latest marks score {b_58:.4f} ({b_58 - b_base:+.4f} against the base rate).")
 
     # A row moved if its leading mark changed between commits or its cell records a dated re-mark. BRT-31's cell
     # carries several conditional percentages in one first call; that is not a re-mark.

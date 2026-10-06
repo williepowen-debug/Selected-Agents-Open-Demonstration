@@ -16,7 +16,7 @@
   "march_7_raises": {
    "commit": "82a3c5644b716817be3a4370f83a944a4af95aa6",
    "date": "2026-03-07T05:20:00+00:00",
-   "note": "BRT-02 70->85, BRT-03 60->80, BRT-05 82->85 (BRT-05 had moved 70->82 earlier on 3/6)",
+   "note": "BRT-02 70->85, BRT-03 60->80, BRT-05 82->85, BRT-15 85->90 (BRT-05 had moved 70->82 earlier on 3/6)",
    "file_sha256": {
     "AGENTS/BRENT/workbook/PREDICTIONS.tsv": "9b657f7615d2aa4777562c2ef1ab3c27901f56a541f637024d45b03c4b351feb"
    }
