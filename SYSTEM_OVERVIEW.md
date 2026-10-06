@@ -2,7 +2,7 @@
 
 **Snapshot boundary:** this architecture and its runtime descriptions were published July 15, 2026, at public commit `094338bdd5d04976495f7affdbde34406ba6bfe6`. September 6 edits clarify scope and navigation; they are not a new audit of the live runtime. The [portfolio notes](PORTFOLIO_NOTES.md#evidence-forms-and-dates) distinguish this reconstruction from later case evidence.
 
-This repository is a curated view into a larger, human-directed research system. The canonical July 2026 roster contains 28 active specialized agents, plus on-demand, dormant, and architectural roles. Only a few representative cases and six reconstructed agent packages are published here.
+This repository is a curated view into a larger, human-directed research system. The canonical July 2026 roster contains 28 active specialized agents, plus on-demand, dormant, and architectural roles; the roster has changed since, and the front page's operating record gives the October 5 count of agents with live state files (40, including non-domain roles). Only a few representative cases and six reconstructed agent packages are published here.
 
 The system is best understood as a Git-versioned research institution, not as a collection of character prompts. Agents retain domain ownership across sessions, write claims and uncertainty into inspectable files, exchange bounded handoffs, and leave dated records when their views change.
 
