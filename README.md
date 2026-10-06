@@ -81,7 +81,7 @@ The system has run near-daily since February 2026. Counts are produced by the co
 
 Two of these matter most. **243 commit-days out of 247** is the practice: a sustained operation, not a weekend build. **482 catalogued failure findings** is the research asset: each is a dated file recording something that went wrong and the procedure that changed in response.
 
-These are activity measures. They say how much was done and recorded, not how much was prevented or how well the forecasts scored. The prediction count takes non-comment rows in files named exactly `PREDICTIONS.tsv`; other ledger definitions give other numbers, which is why the command is published. On October 5 the command also counts four backup copies of the BRENT ledger saved during September clean-ups (124 rows); the 511 figure excludes them and is the one comparable with September's 482. The private repository is available for review on request.
+These are activity measures. They say how much was done and recorded, not how much was prevented or how well the forecasts scored. The prediction count takes non-comment rows in files named exactly `PREDICTIONS.tsv`; other ledger definitions give other numbers, which is why the command is published. On October 5 the command also counts four backup copies of the BRENT ledger saved during September clean-up and review work (124 rows); the 511 figure excludes them and is the one comparable with September's 482. The private repository is available for review on request.
 
 ## Relationship to humanities-derived methods
 
