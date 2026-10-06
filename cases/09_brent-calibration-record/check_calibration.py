@@ -76,6 +76,10 @@ def main():
     if n != sc["n_binary"] or abs(b_now - sc["brier_current_cells"]) > 5e-4 or abs(b_first - sc["brier_first_call"]) > 5e-4:
         fail(f"Brier recomputed n={n} now={b_now:.4f} first={b_first:.4f} vs manifest")
     print(f"PASS: Brier over {n} scored rows = {b_now:.4f} on the latest marks, {b_first:.4f} on the first calls; gap {b_first - b_now:.4f}; always-0.5 = 0.25.")
+    # A stricter comparator than 0.5: always forecasting the resolved yes-rate, known only in hindsight.
+    k = sum(y for *_, y in binary); base = k / n; b_base = base * (1 - base)
+    print(f"NOTE: {k} of {n} scored rows resolved yes ({base:.1%}); always forecasting that rate scores {b_base:.4f}. "
+          f"Latest marks {b_now - b_base:+.4f} and first calls {b_first - b_base:+.4f} against it (negative is better).")
 
     moved = {rid for rid, h in hist.items() if len({m for x in h for m in marks(x["confidence_cell"])}) > 1 or len(marks(rows[rid]["Confidence"])) > 1}
     if moved != {"BRT-02", "BRT-03", "BRT-04", "BRT-05", "BRT-15", "BRT-26", "BRT-28"}:

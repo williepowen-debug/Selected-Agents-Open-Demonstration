@@ -6,7 +6,7 @@ Run from the repository root:
 python3 -B cases/07_vulcan-test-harness-false-pass/reproduction/run_checks.py --selftest
 ```
 
-Requires Python 3.10 or newer and only its standard library. Verified with **Python 3.12.3** on September 6, 2026; other versions have not been tested. No dependency installation, network, model calls, credentials, private repository, or Git executable is needed. The runner writes only to automatically cleaned temporary directories and invokes the same Python interpreter for child processes.
+Requires Python 3.12 or newer and only its standard library. The retained snapshots nest same-type quotes inside f-strings, which earlier versions cannot parse; on those versions the runner exits 1 with a message naming the required version instead of a parse error. Verified with **Python 3.12.3** on September 6, 2026, and with Python 3.12 and 3.13 on October 5, 2026; Python 3.10 and 3.11 were confirmed not to parse the snapshots. No dependency installation, network, model calls, credentials, private repository, or Git executable is needed. The runner writes only to automatically cleaned temporary directories and invokes the same Python interpreter for child processes.
 
 ## What runs
 
