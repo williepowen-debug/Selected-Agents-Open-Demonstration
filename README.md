@@ -16,16 +16,16 @@ The rule that holds it together is simple to state and hard to keep: **a claim o
 
 ## Start here
 
-Four cases give a short route from substantive research to verification and measurement, about fifteen minutes in all:
+Four cases give a short route from substantive research to verification and measurement, about fifteen minutes in all. Each bundles its evidence and a check you can run:
 
 | Read | Question | What you can inspect |
 |---|---|---|
-| [SAM–RED: a thesis survives at a lower grade](cases/01_sam-red-adversarial-dialogue/) | What happens when a research claim fails its own survival bar? | A reconstruction of concessions, a confidence downgrade, and two options blocked |
+| [FERT: right about India, wrong about Qatar by six times](cases/08_fert-matched-pair/) | What does one page of research look like when both of its load-bearing claims are graded? | Two verbatim ledger rows, the March page they came from, and the arithmetic of the 6× miss |
+| [BRENT: sixteen forecasts scored on the first call, Brier 0.191 against a 0.1875 base rate](cases/09_brent-calibration-record/) | Did the forecasts beat chance, does the score survive scoring the marks as first made, and does it beat the desk's own base rate? | Thirty-one verbatim rows, every mark change dated, Brier on both marks, four failures in full |
 | [VIOLET: a repair fails on the second run](cases/04_violet-correction-verification/) | Does a correction stay correct once state persists? | Runnable contrasts across three historical implementations, with failure and recovery controls |
 | [DAEDALUS: an efficiency ratio is withdrawn](cases/06_daedalus-measurement-validity/) | Do the logs measure what the scorecard claims? | Pinned source excerpts and a synthetic counterexample |
-| [BRENT: sixteen forecasts scored on the first call, Brier 0.191 against a 0.1875 base rate](cases/09_brent-calibration-record/) | Did the forecasts beat chance, does the score survive scoring the marks as first made, and does it beat the desk's own base rate? | Thirty-one verbatim rows, every mark change dated, Brier on both marks, three failures in full |
 
-The other five are for readers who want depth. [FERT's matched pair](cases/08_fert-matched-pair/) grades two claims from one March page, one confirmed and one refuted six times over, and says what a ledger row can hide. [BRENT's sustain test](cases/02_brent-calibration-and-deny/) denies confirmation even though the price condition passes. [VULCAN's test-harness case](cases/07_vulcan-test-harness-false-pass/) is the technical companion to VIOLET's, a suite that accepted failed control runs and the exact repair. [WALTER's instruction pilot](cases/05_walter-instruction-pilot/) keeps two archived runs and withdraws the interpretations they cannot support. The [earlier VIOLET incident](cases/03_violet-detection-to-execution-failure/) traces a detected condition to an undelivered obligation and a decision not to act late.
+The other five are for readers who want depth. [SAM–RED](cases/01_sam-red-adversarial-dialogue/) reconstructs an adversarial exchange in which a thesis failed its own survival bar and survived at a lower grade, with two options blocked. [BRENT's sustain test](cases/02_brent-calibration-and-deny/) denies confirmation even though the price condition passes. [VULCAN's test-harness case](cases/07_vulcan-test-harness-false-pass/) is the technical companion to VIOLET's, a suite that accepted failed control runs and the exact repair. [WALTER's instruction pilot](cases/05_walter-instruction-pilot/) keeps two archived runs and withdraws the interpretations they cannot support. The [earlier VIOLET incident](cases/03_violet-detection-to-execution-failure/) traces a detected condition to an undelivered obligation and a decision not to act late.
 
 Cases 1–3 are sanitized narrative reconstructions. Cases 4–9 bundle source-derived code, excerpts, or ledger rows with pinned private revisions and hash manifests.
 
