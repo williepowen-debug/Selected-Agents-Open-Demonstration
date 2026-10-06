@@ -48,7 +48,7 @@ Cases 4 to 10 each ship an offline check. From the repository root:
 python3 -B cases/04_violet-correction-verification/reproduction/run_checks.py --selftest
 
 # VULCAN: 6 expected traces including the historical false pass, plus 2 reproduction controls (standard library, Python 3.12+)
-python3 -B cases/07_vulcan-test-harness-false-pass/reproduction/run_checks.py --selftest
+python3.12 -B cases/07_vulcan-test-harness-false-pass/reproduction/run_checks.py --selftest
 
 # WALTER: 8 archived artifacts against their hashes, instruction sizes, and the run chronology
 python3 -B cases/05_walter-instruction-pilot/check_artifacts.py

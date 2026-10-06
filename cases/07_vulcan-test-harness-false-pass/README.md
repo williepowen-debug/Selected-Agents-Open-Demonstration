@@ -42,7 +42,7 @@ An unexpected control status now produces a diagnostic naming the observed and e
 From the repository root, using Python 3.12 or newer:
 
 ```bash
-python3 -B cases/07_vulcan-test-harness-false-pass/reproduction/run_checks.py --selftest
+python3.12 -B cases/07_vulcan-test-harness-false-pass/reproduction/run_checks.py --selftest
 ```
 
 The runner checks six version/scenario traces and two controls on the reproduction itself. One rejects replacing the historical baseline with repaired code. The other ensures that a setup exception cannot masquerade as successful fault detection. See [setup and substitutions](reproduction/README.md) and [source provenance](PROVENANCE.md).
