@@ -1,6 +1,6 @@
 # Portfolio notes and evidence boundaries
 
-**Editorial revision: September 6, 2026.** This is background for the [portfolio landing page](README.md), not an additional experiment or a current operating dashboard.
+**Editorial revision: September 6, 2026; evidence table and division of work updated October 5, 2026.** This is background for the [portfolio landing page](README.md), not an additional experiment or a current operating dashboard.
 
 ## Operator decisions and attribution
 
@@ -36,7 +36,7 @@ The separate July [incident reconstruction](cases/03_violet-detection-to-executi
 
 ### Division of work
 
-Will designed and operates the broader system, set review requirements, selected work and public cases, and authorized implementation and publication scope. Agents generated research, candidate protocols, code, tests, and proposed corrections. Codex reviewed claims and prepared the September public prose, source extractions, test harness, and synthetic illustration under his direction.
+Will designed and operates the broader system, set review requirements, selected work and public cases, and authorized implementation and publication scope. Agents generated research, candidate protocols, code, tests, and proposed corrections. Codex reviewed claims and prepared the September public prose, source extractions, test harness, and synthetic illustration under his direction. Claude Code re-pinned case 9, wrote case 10 and its checker, and made the October 5 front-page revisions under his direction; an independent Claude Code audit of those revisions found errors that were corrected before this revision closed.
 
 These records support an account of human-directed, AI-assisted work, not sole-human authorship of the technical details.
 
@@ -72,7 +72,7 @@ The roster's active count and the count of agent directories with state files us
 | Case 7: VULCAN test-harness repair | September 6 historical suite revisions | Source-derived suite logic with controlled subprocess exits; not a rerun of the GPU validator or production crashes |
 | Case 8: FERT matched pair | March 20 claims, August 17 grades, September 6 extraction | Verbatim ledger rows and March status lines at pinned revisions; a check on hashes, dates, and arithmetic; graded outcomes not re-sourced |
 | Case 9: BRENT calibration record | March 6 to October 5 ledger history, October 5 extraction (first published September 6) | Thirty-one verbatim rows with six marked redactions, every probability change with its commit date, Brier on current and first-call marks against the base rate; graded outcomes not re-sourced |
-| Case 10: LABOR AI-label | July 2 rule, June to September reports, September 29 card, October 1 grade, October 5 extraction | Verbatim rule, knowledge-base rows, prediction row and whole grading card; every figure, ratio and date recomputed; Challenger's reports not re-read |
+| Case 10: LABOR AI-label | July 2 rule, June to September reports, September 29 card, October 1 grade, October 5 extraction | Verbatim rule, knowledge-base rows, prediction row and whole grading card; every count, share, growth rate and rank checked against the rows; commit times recorded in the manifest, checkable with private access; Challenger's reports not re-read |
 | Research-quality protocol | September 6 draft | A prospective design only; no results or frozen preregistration |
 
 The older cases' source descriptions and sanitization notes remain in their READMEs. Exact operational dates or thresholds withheld in July remain withheld; their exclusion does not imply that the same gates are still live in September. The new cases' hashes support comparison with supplied artifacts, not independent authentication of their private origin.

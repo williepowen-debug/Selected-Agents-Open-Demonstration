@@ -46,12 +46,12 @@
       "time": "2026-09-29T13:11:03-04:00"
     },
     "card_amendment_1_committed": {
-      "commit": "d09db5fe4",
+      "commit": "d09db5fe4d16a524a65adb1722d76f54afebfb52",
       "time": "2026-09-29T13:26:55-04:00"
     },
     "september_report_release": "2026-10-01T05:30:00-04:00",
     "card_graded_committed": {
-      "commit": "5a339a6db",
+      "commit": "5a339a6db1dae7c87feac6c7f258f7420adb1e5b",
       "time": "2026-10-01T12:23:55-04:00"
     },
     "august_report_release": "2026-09-03",

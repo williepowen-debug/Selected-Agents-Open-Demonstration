@@ -4,7 +4,7 @@
 |---|---|
 | **Operated** | since February 1, 2026: 16,594 commits on 243 of 247 days |
 | **Scale** | some thirty specialized agents, 511 registered forecasts, 482 catalogued failure findings |
-| **Result** | scored as first made, the energy desk's sixteen resolved forecasts reach Brier 0.191: better than a coin (0.25), not yet better than always forecasting their own 75% hit rate (0.1875); 0.170 after later re-marks |
+| **Result** | scored as first made, the energy desk's sixteen scored forecasts reach Brier 0.191: better than a coin (0.25), not yet better than always forecasting their own 75% hit rate (0.1875); 0.170 after later re-marks |
 | **Evidence** | ten published cases, seven with offline checks that each run in under a minute once installed (one needs pandas) |
 | **My role** | I designed and operate the system, set its direction and decision rules, and select what is published; agents and an external reviewer produced the analysis, code, and prose under my direction |
 
@@ -12,7 +12,7 @@ I run a persistent, human-directed research system that investigates economic an
 
 The rule that holds it together is simple to state and hard to keep: **a claim of completion is itself a claim.** A test that passes, a receipt that says delivered, a ratio that computes, a correction that says corrected: each gets checked at the artifact it describes, not at the message about it. Every case here is that rule finding something a green result had missed. A repair that failed on its second run. A test harness that accepted crashing controls. An efficiency ratio whose two inputs counted different things. A thesis that survived only at a lower grade. A desk right about India and wrong about Qatar by six times from the same page. A layoff label that fell by four fifths in a month, read as a label and not as a measure of what AI does. A forecast ledger that beats chance but, scored on its first calls, not its own hit rate. I publish the failures because they are where the method shows.
 
-**Portfolio revision: October 5, 2026** (operating record and case 9 re-pinned; other cases as of September 6). Episodes, architectural snapshots, and the proposed experiment carry their own dates and evidence boundaries.
+**Portfolio revision: October 5, 2026** (operating record and case 9 re-pinned, case 10 added, VIOLET and VULCAN checks re-run; other cases as of September 6). Episodes, architectural snapshots, and the proposed experiment carry their own dates and evidence boundaries.
 
 ## Start here
 
@@ -31,13 +31,13 @@ Cases 1–3 are sanitized narrative reconstructions. Cases 4–10 bundle source-
 
 ## What I contributed
 
-I have a literature background and am self-taught across trading, systems design, and AI orchestration. I designed and operate the system: persistent domain ownership, the coordination and decision boundaries, and the process for keeping and challenging prior claims. Agents propose changes to that design and often make them. Three choices in my September review brief shaped the new cases:
+I have a literature background and am self-taught across trading, systems design, and AI orchestration. I designed and operate the system: persistent domain ownership, the coordination and decision boundaries, and the process for keeping and challenging prior claims. Agents propose changes to that design and often make them. Three choices in my September review brief shaped the cases that brief produced, 4 to 7:
 
 - **Separate review from authority to implement.** The external reviewer started read-only, with every finding checked at the owning agent's artifact. That allowed broad criticism without granting anyone permission to rewrite another agent's work.
 - **Require evidence of application, not a receipt.** Delivery, consumption, downstream correction, and evidence-backed closure are four different events. A completion message is a lead to inspect, not the test of success.
-- **Make simplification a constraint.** Prefer a small enforceable invariant over another monitoring layer, and name the measured failure before proposing a new mechanism. Two of the four new cases end in subtraction.
+- **Make simplification a constraint.** Prefer a small enforceable invariant over another monitoring layer, and name the measured failure before proposing a new mechanism. Two of those four end in subtraction.
 
-The brief excerpts are in [operator decisions and attribution](PORTFOLIO_NOTES.md#operator-decisions-and-attribution). The agents produced the analysis, code, repairs, and tests. Codex contributed external review and prepared the September evidence packages and prose under my direction. I selected and authorized publication of these failures. The failures in the system, and in how I built it, are mine.
+The brief excerpts are in [operator decisions and attribution](PORTFOLIO_NOTES.md#operator-decisions-and-attribution). The agents produced the analysis, code, repairs, and tests. Codex contributed external review and prepared the September evidence packages and prose under my direction; Claude Code re-pinned case 9, wrote case 10 and made the October 5 revisions under my direction. I selected and authorized publication of these failures. The failures in the system, and in how I built it, are mine.
 
 ## What you can run
 
@@ -84,7 +84,7 @@ The system has run near-daily since February 2026. Counts are produced by the co
 
 Two of these matter most. **243 commit-days out of 247** is the practice: a sustained operation, not a weekend build. **482 catalogued failure findings** is the research asset: each is a dated file recording something that went wrong and the procedure that changed in response.
 
-These are activity measures. They say how much was done and recorded, not how much was prevented or how well the forecasts scored. The prediction count takes non-comment rows in files named exactly `PREDICTIONS.tsv`; other ledger definitions give other numbers, which is why the command is published. On October 5 the command also counts four backup copies of the BRENT ledger saved during September clean-up and review work (124 rows); the 511 figure excludes them and is the one comparable with September's 482. The private repository is available for review on request.
+These are activity measures. They say how much was done and recorded, not how much was prevented or how well the forecasts scored. The prediction count takes non-comment rows in files named exactly `PREDICTIONS.tsv`; other ledger definitions give other numbers, which is why the command is published. On October 5 the command also counts four backup copies of the BRENT ledger saved during September clean-up and review work (124 rows by the command: each copy holds the 30-row September ledger and one further line the command counts); the 511 figure excludes them and is the one comparable with September's 482. The private repository is available for review on request.
 
 ## Relationship to humanities-derived methods
 
