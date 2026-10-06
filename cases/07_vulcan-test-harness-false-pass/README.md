@@ -39,7 +39,7 @@ An unexpected control status now produces a diagnostic naming the observed and e
 
 ## Run the evidence
 
-From the repository root, using Python 3.10 or newer:
+From the repository root, using Python 3.12 or newer:
 
 ```bash
 python3 -B cases/07_vulcan-test-harness-false-pass/reproduction/run_checks.py --selftest

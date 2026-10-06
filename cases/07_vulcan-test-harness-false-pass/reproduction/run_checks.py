@@ -123,6 +123,9 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--selftest", action="store_true", help="also reject two invalid reproduction controls")
     args = parser.parse_args()
+    # The retained snapshots nest same-type quotes inside f-strings (PEP 701), which parse only on 3.12+.
+    require(sys.version_info >= (3, 12),
+            f"Python 3.12 or newer is required to parse the retained snapshots; this is {sys.version.split()[0]}")
     snapshots = {name: load_snapshot(name) for name in ("before", "after")}
     print("PASS: both source-derived snapshots match their manifest hashes.")
     print("Fixture boundary: real subprocess exits; no GPU validator or market data.")
