@@ -31,7 +31,7 @@ Cases 1–3 are sanitized narrative reconstructions. Cases 4–10 bundle source-
 
 ## What I contributed
 
-I have a literature background and am self-taught across trading, systems design, and AI orchestration. I designed and operate the system: persistent domain ownership, the coordination and decision boundaries, and the process for keeping and challenging prior claims. Agents propose changes to that design and often make them. Three choices in my September review brief shaped the September cases, 4 to 7:
+I have a literature background and am self-taught across trading, systems design, and AI orchestration. I designed and operate the system: persistent domain ownership, the coordination and decision boundaries, and the process for keeping and challenging prior claims. Agents propose changes to that design and often make them. Three choices in my September review brief shaped the cases that brief produced, 4 to 7:
 
 - **Separate review from authority to implement.** The external reviewer started read-only, with every finding checked at the owning agent's artifact. That allowed broad criticism without granting anyone permission to rewrite another agent's work.
 - **Require evidence of application, not a receipt.** Delivery, consumption, downstream correction, and evidence-backed closure are four different events. A completion message is a lead to inspect, not the test of success.

@@ -6,7 +6,7 @@
 
 BRENT is the system's oil and energy desk. In the private repository, commits touch its directory on 161 of the 214 days from March 6 to October 5, and 60 commits touch this ledger; those two counts are in the manifest as context and are not something the bundle can prove. Twenty-three rows were committed on their stated date and five the next day. The three exceptions are below.
 
-Four terms, used throughout: a **mark** is a probability written in the Confidence cell; the **first call** is the mark in the row's earliest commit; a **re-mark** is any later change; **CONFIRMED** and **FAILED** are the desk's usual outcome tokens and **HIT** appears on one June grade (BRT-17), so CONFIRMED and HIT score alike here.
+Four terms, used throughout: a **mark** is a probability written in the Confidence cell; the **first call** is the mark in the row's earliest commit; a **re-mark** is any later change; **CONFIRMED** and **FAILED** are the desk's usual outcome tokens and **HIT** appears on one August grade (BRT-17), so CONFIRMED and HIT score alike here.
 
 ## The record
 
