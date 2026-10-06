@@ -2,17 +2,17 @@
 
 | At a glance | |
 |---|---|
-| **Operated** | since February 1, 2026: 11,364 commits on 214 of 218 days |
-| **Scale** | some thirty specialized agents, 482 registered forecasts, 433 catalogued failure findings |
-| **Result** | the energy desk's fourteen resolved binary forecasts score Brier 0.17: better than the 0.25 chance baseline, level with always forecasting their own 79% hit rate (0.168) |
+| **Operated** | since February 1, 2026: 16,594 commits on 243 of 247 days |
+| **Scale** | some thirty specialized agents, 511 registered forecasts, 482 catalogued failure findings |
+| **Result** | the energy desk's sixteen resolved binary forecasts score Brier 0.170 against 0.1875 for always forecasting their own 75% hit rate, and 0.25 for a coin; scored on the marks as first made, 0.191, which does not beat the hit rate |
 | **Evidence** | nine published cases, six with checks you can run offline in under a minute |
 | **My role** | I designed and operate the system, set its direction and decision rules, and select what is published; agents and an external reviewer produced the analysis, code, and prose under my direction |
 
 I run a persistent, human-directed research system that investigates economic and financial transmission: how an energy shock, a credit constraint, or a policy change moves through other domains. Some thirty specialized agents keep dated claims, predictions, evidence, and disagreements in Git-versioned files. I set the direction and make the consequential calls.
 
-The rule that holds it together is simple to state and hard to keep: **a claim of completion is itself a claim.** A test that passes, a receipt that says delivered, a ratio that computes, a correction that says corrected: each gets checked at the artifact it describes, not at the message about it. Every case here is that rule finding something a green result had missed. A repair that failed on its second run. A test harness that accepted crashing controls. An efficiency ratio whose two inputs counted different things. A thesis that survived only at a lower grade. A desk right about India and wrong about Qatar by six times from the same page. A forecast ledger that beats chance, beats it by a little less once it is scored on the marks as first made, and does not yet beat its own base rate. I publish the failures because they are where the method shows.
+The rule that holds it together is simple to state and hard to keep: **a claim of completion is itself a claim.** A test that passes, a receipt that says delivered, a ratio that computes, a correction that says corrected: each gets checked at the artifact it describes, not at the message about it. Every case here is that rule finding something a green result had missed. A repair that failed on its second run. A test harness that accepted crashing controls. An efficiency ratio whose two inputs counted different things. A thesis that survived only at a lower grade. A desk right about India and wrong about Qatar by six times from the same page. A forecast ledger that beats chance, beats it by a little less once it is scored on the marks as first made, and beats its own base rate only on the marks as they stand, not as first made. I publish the failures because they are where the method shows.
 
-**Portfolio revision: September 6, 2026.** Episodes, architectural snapshots, and the proposed experiment carry their own dates and evidence boundaries.
+**Portfolio revision: October 5, 2026** (operating record and case 9 re-pinned; other cases as of September 6). Episodes, architectural snapshots, and the proposed experiment carry their own dates and evidence boundaries.
 
 ## Start here
 
@@ -23,7 +23,7 @@ Four cases give a short route from substantive research to verification and meas
 | [SAM–RED: a thesis survives at a lower grade](cases/01_sam-red-adversarial-dialogue/) | What happens when a research claim fails its own survival bar? | A reconstruction of concessions, a confidence downgrade, and two options blocked |
 | [VIOLET: a repair fails on the second run](cases/04_violet-correction-verification/) | Does a correction stay correct once state persists? | Runnable contrasts across three historical implementations, with failure and recovery controls |
 | [DAEDALUS: an efficiency ratio is withdrawn](cases/06_daedalus-measurement-validity/) | Do the logs measure what the scorecard claims? | Pinned source excerpts and a synthetic counterexample |
-| [BRENT: fourteen forecasts scored, Brier 0.17 against 0.25](cases/09_brent-calibration-record/) | Did the forecasts beat chance, does the score survive scoring the marks as first made, and does it beat the desk's own base rate? | Thirty verbatim rows, every mark change dated, Brier on both marks, three failures in full |
+| [BRENT: sixteen forecasts scored, Brier 0.170 against a 0.1875 base rate](cases/09_brent-calibration-record/) | Did the forecasts beat chance, does the score survive scoring the marks as first made, and does it beat the desk's own base rate? | Thirty-one verbatim rows, every mark change dated, Brier on both marks, three failures in full |
 
 The other five are for readers who want depth. [FERT's matched pair](cases/08_fert-matched-pair/) grades two claims from one March page, one confirmed and one refuted six times over, and says what a ledger row can hide. [BRENT's sustain test](cases/02_brent-calibration-and-deny/) denies confirmation even though the price condition passes. [VULCAN's test-harness case](cases/07_vulcan-test-harness-false-pass/) is the technical companion to VIOLET's, a suite that accepted failed control runs and the exact repair. [WALTER's instruction pilot](cases/05_walter-instruction-pilot/) keeps two archived runs and withdraws the interpretations they cannot support. The [earlier VIOLET incident](cases/03_violet-detection-to-execution-failure/) traces a detected condition to an undelivered obligation and a decision not to act late.
 
@@ -67,21 +67,21 @@ Each reproduction README states what the harness substitutes and what it leaves 
 
 ## Operating record
 
-The system has run near-daily since February 2026. Counts are produced by the commands shown, run against the private operating repository at commit `7a0a32ffc18c5e817f06b5cd99ec3f8aa912e246` (2026-09-06 16:26 ET). The July column is the figure published in this repository's July 26 revision.
+The system has run near-daily since February 2026. Counts are produced by the commands shown, run against the private operating repository at commit `7d15d5c9200e802d0c702884c6655f6e6d53ef7d` (2026-10-05 18:13 ET). The July and September columns are the figures published in this repository's July 26 and September 6 revisions, the latter at commit `7a0a32ffc18c5e817f06b5cd99ec3f8aa912e246`.
 
-| Metric | Jul 26 | Sep 6 | Command |
-|---|---|---|---|
-| First commit | 2026-02-01 | 2026-02-01 | `git log --reverse --format=%ad --date=short \| head -1` |
-| Days with commits | 172 of 176 | **214 of 218** | `git log --format=%ad --date=short \| sort -u \| wc -l` |
-| Total commits | 5,117 | 11,364 | `git rev-list --count HEAD` |
-| Agents with live state files | 38 | 39 | `ls AGENTS/*/STATUS.md \| wc -l` |
-| Catalogued failure findings | 208 | **433** | `ls memory/auto/finding_*.md \| wc -l` |
-| Registered predictions | 411 across 42 ledgers | **482** across 44 ledgers | `find AGENTS -name PREDICTIONS.tsv -exec awk 'FNR>1 && $0!~/^#/ && NF>2' {} \; \| wc -l` |
-| Daily session notes | 128 | 169 | `ls memory/2*.md \| wc -l` |
+| Metric | Jul 26 | Sep 6 | Oct 5 | Command |
+|---|---|---|---|---|
+| First commit | 2026-02-01 | 2026-02-01 | 2026-02-01 | `git log --reverse --format=%ad --date=short \| head -1` |
+| Days with commits | 172 of 176 | 214 of 218 | **243 of 247** | `git log --format=%ad --date=short \| sort -u \| wc -l` |
+| Total commits | 5,117 | 11,364 | 16,594 | `git rev-list --count HEAD` |
+| Agents with live state files | 38 | 39 | 40 | `ls AGENTS/*/STATUS.md \| wc -l` |
+| Catalogued failure findings | 208 | 433 | **482** | `ls memory/auto/finding_*.md \| wc -l` |
+| Registered predictions | 411 across 42 ledgers | 482 across 44 ledgers | **635** across 49 ledgers; **511** without four September snapshot copies of one ledger | `find AGENTS -name PREDICTIONS.tsv -exec awk 'FNR>1 && $0!~/^#/ && NF>2' {} \; \| wc -l` |
+| Daily session notes | 128 | 169 | 197 | `ls memory/2*.md \| wc -l` |
 
-Two of these matter most. **214 commit-days out of 218** is the practice: a sustained operation, not a weekend build. **433 catalogued failure findings** is the research asset: each is a dated file recording something that went wrong and the procedure that changed in response.
+Two of these matter most. **243 commit-days out of 247** is the practice: a sustained operation, not a weekend build. **482 catalogued failure findings** is the research asset: each is a dated file recording something that went wrong and the procedure that changed in response.
 
-These are activity measures. They say how much was done and recorded, not how much was prevented or how well the forecasts scored. The prediction count takes non-comment rows in files named exactly `PREDICTIONS.tsv`; other ledger definitions give other numbers, which is why the command is published. The private repository is available for review on request.
+These are activity measures. They say how much was done and recorded, not how much was prevented or how well the forecasts scored. The prediction count takes non-comment rows in files named exactly `PREDICTIONS.tsv`; other ledger definitions give other numbers, which is why the command is published. On October 5 the command also counts four backup copies of the BRENT ledger saved during September clean-ups (124 rows); the 511 figure excludes them and is the one comparable with September's 482. The private repository is available for review on request.
 
 ## Relationship to humanities-derived methods
 

@@ -54,7 +54,7 @@ The system can make evidence, disagreement, and failure more legible. It does no
 
 ## 13. The scoring mark is the first call
 
-[Case 9](cases/09_brent-calibration-record/) scores one desk's fourteen resolved forecasts twice: on the probability cells as they read today and on the marks first committed. The cells are 0.015 of Brier kinder, and neither score beats always forecasting the desk's own 79% hit rate (0.168): a high hit rate from cautious registration is not the same as discrimination. Every re-mark was documented in its row; the March re-marks were made within a day of registration, and one was raised after its window had closed. Keep the first call in the scoring cell, date every re-mark beside it, and treat a re-mark after the window as information about the outcome rather than the forecast.
+[Case 9](cases/09_brent-calibration-record/) scores one desk's sixteen resolved forecasts twice: on the probability cells as they read today and on the marks first committed. The cells are 0.021 of Brier kinder, up from 0.015 at fourteen rows, and only the cells beat always forecasting the desk's own 75% hit rate (0.1875); the first calls do not. A high hit rate from cautious registration is not the same as discrimination, and a margin that appears only after re-marking is the gap this lesson is about. Every re-mark was documented in its row; the March re-marks were made within a day of registration, and one was raised after its window had closed. Keep the first call in the scoring cell, date every re-mark beside it, and treat a re-mark after the window as information about the outcome rather than the forecast.
 
 ## Open research questions
 
