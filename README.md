@@ -2,17 +2,17 @@
 
 | At a glance | |
 |---|---|
-| **Operated** | since February 1, 2026: 16,594 commits on 243 of 247 days |
-| **Scale** | some thirty specialized agents, 511 registered forecasts, 482 catalogued failure findings |
+| **Operated** | since February 1, 2026: 18,575 commits (including automated state writes) on 253 of 258 days, as of October 16, 2026 |
+| **Scale** | more than thirty active specialized agents, 445 registered forecasts in 30 live ledgers, 487 catalogued failure findings |
 | **Result** | scored as first made, the energy desk's sixteen scored forecasts reach Brier 0.191: better than a coin (0.25), not yet better than always forecasting their own 75% hit rate (0.1875); 0.170 after later re-marks |
 | **Evidence** | ten published cases, seven with offline checks that each run in under a minute once installed (one needs pandas) |
 | **My role** | I designed and operate the system, set its direction and decision rules, and select what is published; agents and an external reviewer produced the analysis, code, and prose under my direction |
 
-I run a persistent, human-directed research system that investigates economic and financial transmission: how an energy shock, a credit constraint, or a policy change moves through other domains. Some thirty specialized agents keep dated claims, predictions, evidence, and disagreements in Git-versioned files. I set the direction and make the consequential calls.
+I run a persistent, human-directed research system that investigates economic and financial transmission: how an energy shock, a credit constraint, or a policy change moves through other domains. More than thirty specialized agents keep dated claims, predictions, evidence, and disagreements in Git-versioned files. I set the direction and make the consequential calls.
 
 The rule that holds it together is simple to state and hard to keep: **a claim of completion is itself a claim.** A test that passes, a receipt that says delivered, a ratio that computes, a correction that says corrected: each gets checked at the artifact it describes, not at the message about it. Every case here is that rule finding something a green result had missed. A repair that failed on its second run. A test harness that accepted crashing controls. An efficiency ratio whose two inputs counted different things. A thesis that survived only at a lower grade. A desk right about India and wrong about Qatar by six times from the same page. A layoff label that fell by four fifths in a month, read as a label and not as a measure of what AI does. A forecast ledger that beats chance but, scored on its first calls, not its own hit rate. I publish the failures because they are where the method shows.
 
-**Portfolio revision: October 5, 2026** (operating record and case 9 re-pinned, case 10 added, VIOLET and VULCAN checks re-run; other cases as of September 6). Episodes, architectural snapshots, and the proposed experiment carry their own dates and evidence boundaries.
+**Portfolio revision: October 18, 2026** (operating record re-pinned to October 16). Previous revision October 5 (case 9 re-pinned, case 10 added, VIOLET and VULCAN checks re-run; other cases as of September 6). Episodes, architectural snapshots, and the proposed experiment carry their own dates and evidence boundaries.
 
 ## Start here
 
@@ -70,21 +70,21 @@ Each reproduction README states what the harness substitutes and what it leaves 
 
 ## Operating record
 
-The system has run near-daily since February 2026. Counts are produced by the commands shown, run against the private operating repository at commit `7d15d5c9200e802d0c702884c6655f6e6d53ef7d` (2026-10-05 18:13 ET). The July and September columns are the figures published in this repository's July 26 and September 6 revisions, the latter at commit `7a0a32ffc18c5e817f06b5cd99ec3f8aa912e246`.
+The system has run near-daily since February 2026. Counts are produced by the commands shown, run against the operating repository, now public at [github.com/williepowen-debug/Research-workspace](https://github.com/williepowen-debug/Research-workspace), at commit `b544e9b1374ddb25579e763f440a3061cbddb2bd` (2026-10-16 20:46 ET). The July, September and October 5 columns are the figures published in this repository's earlier revisions (September at commit `7a0a32ffc18c5e817f06b5cd99ec3f8aa912e246`, October 5 at `7d15d5c9200e802d0c702884c6655f6e6d53ef7d`).
 
-| Metric | Jul 26 | Sep 6 | Oct 5 | Command |
-|---|---|---|---|---|
-| First commit | 2026-02-01 | 2026-02-01 | 2026-02-01 | `git log --reverse --format=%ad --date=short \| head -1` |
-| Days with commits | 172 of 176 | 214 of 218 | **243 of 247** | `git log --format=%ad --date=short \| sort -u \| wc -l` |
-| Total commits | 5,117 | 11,364 | 16,594 | `git rev-list --count HEAD` |
-| Agents with live state files | 38 | 39 | 40 | `ls AGENTS/*/STATUS.md \| wc -l` |
-| Catalogued failure findings | 208 | 433 | **482** | `ls memory/auto/finding_*.md \| wc -l` |
-| Registered predictions | 411 across 42 ledgers | 482 across 44 ledgers | **635** across 49 ledgers; **511** without four September snapshot copies of one ledger | `find AGENTS -name PREDICTIONS.tsv -exec awk 'FNR>1 && $0!~/^#/ && NF>2' {} \; \| wc -l` |
-| Daily session notes | 128 | 169 | 197 | `ls memory/2*.md \| wc -l` |
+| Metric | Jul 26 | Sep 6 | Oct 5 | Oct 16 | Command |
+|---|---|---|---|---|---|
+| First commit | 2026-02-01 | 2026-02-01 | 2026-02-01 | 2026-02-01 | `git log --reverse --format=%ad --date=short \| head -1` |
+| Days with commits | 172 of 176 | 214 of 218 | 243 of 247 | **253 of 258** | `git log --format=%ad --date=short \| sort -u \| wc -l` |
+| Total commits | 5,117 | 11,364 | 16,594 | 18,575 | `git rev-list --count HEAD` |
+| Agents with live state files | 38 | 39 | 40 | 41 | `ls AGENTS/*/STATUS.md \| wc -l` |
+| Catalogued failure findings | 208 | 433 | 482 | **487** | `ls memory/auto/finding_*.md \| wc -l` |
+| Registered predictions | 411 across 42 ledgers | 482 across 44 ledgers | 635 across 49 ledgers; 511 without four September snapshot copies of one ledger | 653 across 52 ledgers; **445 across 30 live ledgers** | `find AGENTS -name PREDICTIONS.tsv -exec awk 'FNR>1 && $0!~/^#/ && NF>2' {} \; \| wc -l` |
+| Daily session notes | 128 | 169 | 197 | 207 | `ls memory/2*.md \| wc -l` |
 
-Two of these matter most. **243 commit-days out of 247** is the practice: a sustained operation, not a weekend build. **482 catalogued failure findings** is the research asset: each is a dated file recording something that went wrong and the procedure that changed in response.
+Two of these matter most. **253 commit-days out of 258** is the practice: a sustained operation, not a weekend build. **487 catalogued failure findings** is the research asset: each is a dated file recording something that went wrong and the procedure that changed in response.
 
-These are activity measures. They say how much was done and recorded, not how much was prevented or how well the forecasts scored. The prediction count takes non-comment rows in files named exactly `PREDICTIONS.tsv`; other ledger definitions give other numbers, which is why the command is published. On October 5 the command also counts four backup copies of the BRENT ledger saved during September clean-up and review work (124 rows by the command: each copy holds the 30-row September ledger and one further line the command counts); the 511 figure excludes them and is the one comparable with September's 482. The private repository is available for review on request.
+These are activity measures. They say how much was done and recorded, not how much was prevented or how well the forecasts scored. The prediction count takes non-comment rows in files named exactly `PREDICTIONS.tsv`; other ledger definitions give other numbers, which is why the command is published. On October 5 the command also counts four backup copies of the BRENT ledger saved during September clean-up and review work (124 rows by the command: each copy holds the 30-row September ledger and one further line the command counts); the 511 figure excludes them and is the one comparable with September's 482. From October 16 the headline count follows the operating repository's README definition: live ledgers only, excluding archived snapshots and research and sub-agent copies (`-not -path '*/archive/*' -not -path '*/_archive/*' -not -path '*/research/*' -not -path '*/sub_agents/*'`), which gives 445 rows across 30 ledgers; the all-files command above gives 653 across 52. The two definitions are not comparable with each other or with earlier columns.
 
 ## Relationship to humanities-derived methods
 
@@ -116,4 +116,4 @@ The study I would run first is written: the [research-quality pilot](experiments
 
 ## Boundaries
 
-Private working state, positions, credentials, and operational integrations are excluded; private source artifacts are available for review on request. This material supports inspection of particular reasoning and failure mechanisms. It does not establish production-grade runtime reliability or financial returns.
+This repository excludes working state, positions, credentials, and operational integrations; the full operating record is the public operating repository linked under Operating record. Case provenance notes written before it was public still call it private; their pinned commits resolve there. This material supports inspection of particular reasoning and failure mechanisms. It does not establish production-grade runtime reliability or financial returns.
