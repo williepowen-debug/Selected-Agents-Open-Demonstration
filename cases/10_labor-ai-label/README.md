@@ -1,5 +1,7 @@
 # Case 10 — LABOR: What "AI-cited layoffs" measures
 
+**Correction added November 2026.** This case was published as an example of a rule doing its job. A later review found that the technology leg of that rule could not have been met at either grade: the 2026 total had already passed both ceilings by the end of July, so the score would have held at 4 even with no further technology cuts. The hold was therefore not new evidence that displacement pressure continued. The original account below is kept as published; the correction is in [Subsequent evaluation](#subsequent-evaluation).
+
 **From June to September 2026, the share of announced US job cuts that employers attributed to artificial intelligence fell from 31% to 9%, while job cuts in the technology sector stayed more than 50% above the previous year's pace. The labor desk had written down in July what that pattern would and would not mean, and on October 1 it graded the September report by that rule rather than by the headline.** The AI share is a statement about what employers say. This case is about a desk declining to read it as a measure of what AI does.
 
 LABOR is the system's labor-market desk. Its inputs here are the monthly Challenger, Gray & Christmas job-cut reports, which tally announced layoffs and the reasons employers give for them. Every count below appears verbatim in the desk's own records, bundled in [evidence](evidence/); the shares and growth rates are computed from those counts. The reports themselves are public at challengergray.com.
@@ -39,6 +41,23 @@ The September report put the AI share at 3,961 / 43,281 = 9.15%, the second mont
 - **The August report was read 26 days late.** Released September 3, captured September 29; the desk's status file carried July's figures in the meantime.
 - **The grading card was itself defective, and was fixed before the data.** It was written two days before the release against a one-week target; it gave the release time as 7:30 ET from a search summary when the publisher's calendar said 5:30; and its bands were drawn on figures rounded to one decimal, so a share of 19.96% would have displayed as "20.0%" and been assigned to the wrong side of a strict "below 20%" bar. The card's own hand-written proof that its bands left no gaps had certified those rounded boundaries. A reviewer found the time and the rounding defects; Amendment 1, committed sixteen minutes after the card and about forty hours before the release, corrected the time and moved grading to exact ratios. The lateness stands. The grade also used September 2025's technology base (107,878), which the report printed, rather than the August base the card's input table had carried.
 - **The prediction behind the score was not re-marked.** LAB-11, "AI narrative shield breaks", stands at 50%, cut from 55% on July 31 after one staffing company answered the displacement question with growth. Its notes cite AI's run as the top Challenger reason as supporting evidence. That run ended in August, and the row has not been re-marked since; a September 10 note corrected the record of its first call to 55%, which is not a re-mark. The September card deliberately leaves LAB-11 ungraded and says any re-mark will be made against the row's own wording, with its date written beside it. Its stated date, February 18, is a bulk-seeding placeholder; the earliest commit carrying the row is March 6, and the row records that it will be scored on the 55% first call.
+
+## Subsequent evaluation
+
+*Added November 2026. Nothing above was changed.*
+
+The account above stands on what it says happened: the rule and the card predate the data, and the desk graded by them. What it missed is that the grade could not have come out any other way.
+
+| Grade | 2025 technology cuts, year to date | Ceiling at under +20% | 2026 technology cuts through July alone |
+|---|---:|---:|---:|
+| August | 102,239 | 122,686 | 149,023 |
+| September | 107,878 | 129,453 | 149,023 |
+
+The rule paired a two-month test with a cumulative one. By the end of July the cumulative test was already out of reach for both grades, whatever August and September brought. The sentence above saying the technology leg "asked whether the underlying cuts had actually slowed" describes what the leg was meant to do, not what it could do in this window.
+
+So this is a monitoring failure, not a validation of the safeguard. Holding at 4 was consistent with the rule, but the rule could not have registered improvement. The unchanged grade provided no new confirmation from the August and September observations that displacement pressure continued. The underlying concern may still have been justified; this result cannot establish it. Writing a rule down before the data protects against moving the standard afterwards. It does not show that the rule can answer the question it was written for.
+
+The review was done by Will Owen with AI assistance after the case was published. It is arithmetic on the figures in the table at the top of this case.
 
 ## What this case does and does not show
 

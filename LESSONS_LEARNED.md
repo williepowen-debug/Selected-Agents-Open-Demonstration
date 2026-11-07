@@ -58,7 +58,7 @@ The system can make evidence, disagreement, and failure more legible. It does no
 
 ## 14. A label is not the quantity it names
 
-[Case 10](cases/10_labor-ai-label/) follows the share of announced layoffs that employers attributed to AI as it fell from 31% to 9% in three months, while technology-sector cuts stayed more than 50% above the previous year's pace. The desk had written in July that it would downgrade its AI-displacement score only if the share stayed low *and* technology cuts slowed, and in September its card said in advance that it would not read a share move as a change in displacement. The score held. Write down what a reported series cannot distinguish before it moves, and make the rule need a second leg that reads the activity rather than the label.
+[Case 10](cases/10_labor-ai-label/) follows the share of announced layoffs that employers attributed to AI as it fell from 31% to 9% in three months, while technology-sector cuts stayed more than 50% above the previous year's pace. The desk had written in July that it would downgrade its AI-displacement score only if the share stayed low *and* technology cuts slowed, and in September its card said in advance that it would not read a share move as a change in displacement. The score held. Write down what a reported series cannot distinguish before it moves, and make the rule need a second leg that reads the activity rather than the label. *Correction, November 2026:* that second leg was a cumulative total that could not have cleared in the window it graded, so the hold proved less than this paragraph implies. The added lesson: before relying on a rule, check that it can change its answer.
 
 ## Open research questions
 
